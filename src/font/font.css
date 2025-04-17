@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Sweet Sans Pro';
+    src: url('./sweet-sans-pro/SweetSansProRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sweet Sans Pro';
+    src: url('./sweet-sans-pro/SweetSansProBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
