@@ -1,9 +1,10 @@
 .terms-container{
-  height: 50vh;
+  /* height: 50vh; */
+  padding-top: 6em; 
   padding-top: 10em;
 }
 .scrollable-wrapper {
-  max-height: calc(100vh - 200px); /* Adjust 200px based on header and footer height */
+  max-height: none;
   overflow-y: auto; /* Enable vertical scrolling */
   padding-top: 2em;
   padding-bottom: 5em;
