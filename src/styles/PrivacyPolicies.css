@@ -1,0 +1,134 @@
+.privacy-policies-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10em 5em;
+  background-color: #f5f5f5;
+}
+
+.content-body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-header {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.scrollable-wrapper {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.content-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.content-text strong {
+  color: #333;
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-text em {
+  color: #666;
+}
+
+.content-text hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+.content-text ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.content-text ul {
+  padding-left: 2rem;
+  margin: 0.5rem 0;
+}
+
+.content-text ul li {
+  margin-bottom: 1rem;
+}
+
+.content-text ul li strong {
+  display: inline;
+  margin: 0;
+}
+
+.content-text li {
+  margin-bottom: 0.5rem;
+}
+
+.content-text a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.content-text a:hover {
+  text-decoration: underline;
+}
+
+.content-text div {
+  margin: 2rem 0;
+}
+
+/* Add these new styles */
+.content-text #security ul,
+.content-text #special-considerations ul,
+.content-text #regional ul {
+  margin: 1rem 0;
+}
+
+.content-text #special-considerations strong {
+  color: #333;
+  margin-top: 1.5rem;
+}
+
+.content-text #special-considerations ul li {
+  margin-bottom: 0.75rem;
+}
+
+.content-text #regional {
+  margin-bottom: 3rem;
+}
+
+.content-text #regional ul {
+  margin-top: 1rem;
+}
+
+/* Add these new styles */
+.content-text #children,
+.content-text #third-party,
+.content-text #changes,
+.content-text #contact {
+  margin: 2rem 0;
+}
+
+.content-text #contact strong {
+  margin-bottom: 1rem;
+}
+
+.content-text #contact a {
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+/* Enhance existing styles */
+.content-text hr:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.content-text div:last-child {
+  margin-bottom: 4rem;
+}

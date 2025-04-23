@@ -4,10 +4,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Terms from "./pages/Terms";
+import PrivacyPolicies from "./pages/PrivacyPolicies";
+import DeleteAccount from "./pages/DeleteAccount";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
 import "./css/root.css";
 import "./font/font.css";
+import Footer from "./pages/Footer";
 
 const Navbar = () => (
   <header class="sticky-top">
@@ -42,21 +46,25 @@ const Navbar = () => (
     </nav>
   </header>
 );
-const Footer = () => (
-  <footer>
-    <span id="year-container">©️ {new Date().getFullYear()} Nimble. All rights reserved</span>
-  </footer>
-);
+
+
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-      <Footer />
+      <div className="app-container">
+        <Navbar />
+        <div className="main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/PrivacyPolicies" element={<PrivacyPolicies />} />
+            <Route path="/Terms" element={<Terms />} />
+            <Route path="/DeleteAccount" element={<DeleteAccount />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </Router>
   );
 };
