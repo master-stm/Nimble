@@ -56,7 +56,7 @@ html, body, #root {
 
 .footer-links {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
@@ -72,7 +72,8 @@ html, body, #root {
   list-style: disc inside;
   padding: 0;
   margin: 0;
-  text-align: center;      
+  text-align: center;    
+  margin-left: auto;  
 }
 
 .footer-nav a {

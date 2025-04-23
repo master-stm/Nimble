@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-links">
           <div className="footer-copyright">
-            © {new Date().getFullYear()} Nimble. All rights reserved
+            © {new Date().getFullYear()} Motura Inc., Operating under the trade name Nimble. All rights reserved
           </div>
           <ul className="footer-nav">
             <li><a href="/PrivacyPolicies">Privacy</a></li>
