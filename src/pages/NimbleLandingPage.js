@@ -1,19 +1,32 @@
 import React, { useState, useEffect,useCallback } from 'react';
 import logo_img from '../images/logo_white.png';
-import phone1 from '../images/phone1.png';
-import slide1 from '../images/hero-image-frame.svg'; 
+import phone1 from '../images/banner_main.png';
+
 import slide2 from '../images/logo.svg'; 
 import feature1 from '../images/feature1.png'; 
 import feature2 from '../images/feature2.png'; 
-import test from '../images/test.png'; 
-
+import last_frame from '../images/last_frame.png'; 
 import feature3 from '../images/feature3.png'; 
 import '../styles/NLP_Islider.css'
 import FeatureBlock from '../component/FeatureBlock';
 import HeroSection from '../component/HeroSection';
 import Footer from '../pages/Footer';
 const NimbleLandingPage = () => {
-  const slides = [slide1, slide2];
+  const slides = [
+    {
+      headline: "Get your free goodie bag only on launch day",
+      subtext: "Spend $25 or more and get it today",
+    },
+    {
+      headline: "Refer 5 & get 15% off",
+      subtext: "offer valid on purchase over $25 on June 14th.",
+    },
+    {
+      headline: "Students, stock up!",
+      subtext: "get upto 20% off groceries for next 3 months.",
+    }
+  ];
+  
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
@@ -145,42 +158,45 @@ const NimbleLandingPage = () => {
             </div>
       </section>
       {/* Custom Promo Slider */}
-      <section className="carousel-wrapper">
-        <div className="carousel-slides">
-          {slides.map((img, index) => (
-            <div
-              key={index}
-              className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
-           
-            >
-              <div className="slide-content">
-                <img src={img} alt={`Slide ${index + 1}`} className="slide-image" />
-                <div className="slide-text">
-                  <h2>Get your free goodie bag only on launch day</h2>
-                  <p>Spend $25 or more and get it today</p>
-                  <button className="download-btn">Download Now</button>
-                  <p className="terms">*T&C apply</p>
+      <section className={`carousel-wrapper slide-${currentSlide}`}>
+          <div className="carousel-slides">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`carousel-slide slide-${index} ${index === currentSlide ? 'active' : ''}`}
+              >
+                <div className="slide-content">
+
+                    <div className="slide-text">
+                      <h2>{slide.headline}</h2>
+                      <p>{slide.subtext}</p>
+                      <button className="download-btn">Download Now</button>
+                      <p className="terms">*T&C apply</p>
+                    </div>
+
                 </div>
+
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Navigation */}
-        <button onClick={prevSlide} className="carousel-btn prev">&#10094;</button>
-        <button onClick={nextSlide} className="carousel-btn next">&#10095;</button>
+          {/* Navigation */}
+          <button onClick={prevSlide} className="carousel-btn prev">&#10094;</button>
+          <button onClick={nextSlide} className="carousel-btn next">&#10095;</button>
 
-        {/* Dots */}
-        <div className="carousel-dots">
-          {slides.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === currentSlide ? 'active' : ''}`}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
-        </div>
-      </section >
+          {/* Dots */}
+          <div className="carousel-dots">
+            {slides.map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${index === currentSlide ? 'active' : ''}`}
+                onClick={() => setCurrentSlide(index)}
+              />
+            ))}
+          </div>
+        </section>
+
+
       <section className="features-wrapper">
               <h2 className="features-heading">Features of Nimble</h2>
 
@@ -206,7 +222,7 @@ const NimbleLandingPage = () => {
             </section>
 
     
-      <HeroSection image={test} />
+      <HeroSection image={last_frame} />
       <Footer bgColor="#A4EC8A" textColor="#064E3B" />
 
     </div>

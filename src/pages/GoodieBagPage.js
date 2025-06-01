@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from './Footer';
 import '../styles/GoodieBagPage.css';
 import CategorySlider from '../component/CategorySlider.js';
-
+import n_logo from '../images/n_logo.png'
 const GoodieBagPage = () => {
   const categories = [
     {
@@ -55,7 +55,7 @@ const GoodieBagPage = () => {
       <div className="goodie-center-wrapper">
         <div className="goodie-card-container">
           <div className="logo-wrapper">
-            <img src="../images/logo.svg" alt="Nimble Logo" className="logo-centered" />
+            <img src={n_logo} alt="Nimble Logo" className="logo-centered" />
           </div>
           <div className="goodie-bag-card">
             <div className="goodie-header">
