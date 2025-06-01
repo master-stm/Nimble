@@ -1,27 +1,28 @@
 .goodie-bag-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-color: #f8f8f8;
+
+    background-color: #ffffff;
   }
   
+
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    
+  }
   .goodie-center-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .logo-wrapper {
-    display: flex;
-    justify-content: center;
-    
-  }
-  
   .goodie-card-container {
     position: relative;
-    max-width: 600px;
-    padding: 40px 20px;
+    max-width: 500px;
+    padding: 30px 16px;
     width: 100%;
+
   } 
   
   .logo-floating {
@@ -38,6 +39,10 @@
     text-align: center;
     margin-top: 2px;
   }
+  .goodie-header h2 {
+    font-size: 1.4rem;
+    color: #074F51; 
+  }
   
   
   .goodie-bag-card {
@@ -45,8 +50,8 @@
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     padding: 40px 30px;
-    max-width: 600px;
     width: 100%;
+    box-sizing: border-box;
     max-height: 80vh;          
     overflow-y: auto;           
     scrollbar-width: thin;      
@@ -54,7 +59,7 @@
   
   .subtitle {
     color: #888;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-bottom: 2rem;
   }
   
@@ -62,7 +67,7 @@
     margin-top: 30px;
   }
   .category-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;

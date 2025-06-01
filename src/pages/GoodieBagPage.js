@@ -58,12 +58,14 @@ const GoodieBagPage = () => {
         <div className="goodie-card-container">
           <div className="logo-wrapper">
             <img src={n_logo} alt="Nimble Logo" className="logo-centered" />
+            
           </div>
-          <div className="goodie-bag-card">
-            <div className="goodie-header">
-              <h2>Goodie Bag</h2>
+          <div className="goodie-header">
+              <h2 >Goodie Bag</h2>
               <p className="subtitle">What's in my goodie bag?</p>
             </div>
+          <div className="goodie-bag-card">
+
             {categories.map((category, index) => (
               <CategorySlider
                 key={index}
