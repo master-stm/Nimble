@@ -28,7 +28,7 @@
 .footer-social {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* ✅ allow wrapping on small screens */
+  flex-wrap: wrap; 
   gap: 1rem;
   list-style: none;
   padding: 0;
@@ -54,7 +54,7 @@
   color: #004C45;
 }
 
-/* ✅ Media Queries for Smaller Screens */
+
 @media (max-width: 480px) {
   .footer-tagline {
     font-size: 1rem;

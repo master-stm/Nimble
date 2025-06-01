@@ -47,9 +47,9 @@
     padding: 40px 30px;
     max-width: 600px;
     width: 100%;
-    max-height: 80vh;            /* ✅ restrict height to viewport */
-    overflow-y: auto;            /* ✅ enables internal scroll */
-    scrollbar-width: thin;       /* optional for Firefox */
+    max-height: 80vh;          
+    overflow-y: auto;           
+    scrollbar-width: thin;      
   }
   
   .subtitle {
