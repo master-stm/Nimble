@@ -4,6 +4,8 @@ import Footer from './Footer';
 import '../styles/GoodieBagPage.css';
 import CategorySlider from '../component/CategorySlider.js';
 import n_logo from '../images/n_logo.png'
+import prod from '../images/prod_img.png'
+import bev from '../images/bev.png'
 const GoodieBagPage = () => {
   const categories = [
     {
@@ -12,7 +14,7 @@ const GoodieBagPage = () => {
         { 
           name: 'Rubicon Sparkling Guava', 
           size: '355 ml', 
-          image: '../images/logo.svg', 
+          image: prod, 
           link: '#' 
         }
       ]
@@ -22,7 +24,7 @@ const GoodieBagPage = () => {
         { 
           name: 'Rubicon Sparkling Guava', 
           size: '355 ml', 
-          image: '../images/logo.svg', 
+          image: prod, 
           link: '#' 
         }
       ]
@@ -30,9 +32,9 @@ const GoodieBagPage = () => {
     {
       categoryName: 'Healthy Snacks',
       products: [
-        { name: 'Bassé Nuts Premium Mix', size: '600 g', image: '../images/logo.svg', link: '#' },
-        { name: 'Trail Mix Supreme', size: '400 g', image: '../images/logo.svg', link: '#' },
-        { name: 'Roasted Chickpeas', size: '250 g', image: '../images/logo.svg', link: '#' }
+        { name: 'Bassé Nuts Premium Mix', size: '600 g', image: prod, link: '#' },
+        { name: 'Trail Mix Supreme', size: '400 g', image: prod, link: '#' },
+        { name: 'Roasted Chickpeas', size: '250 g', image: prod, link: '#' }
       ]
     },
     {
@@ -41,7 +43,7 @@ const GoodieBagPage = () => {
         { 
           name: 'Rubicon Sparkling Guava', 
           size: '355 ml', 
-          image: '../images/logo.svg', 
+          image: bev, 
           link: '#' 
         }
       ]
