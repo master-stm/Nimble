@@ -109,4 +109,45 @@
     background-color: #066b64;
   }
       
+  @media (max-width: 576px) {
+    .goodie-card-container {
+      padding: 20px 12px;
+    }
+  
+    .goodie-bag-card {
+      padding: 24px 16px;
+      max-height: unset;         /* Allow full scroll on mobile */
+      border-radius: 12px;
+    }
+  
+    .goodie-header h2 {
+      font-size: 1.6rem;
+    }
+  
+    .subtitle {
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .category-title {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+  
+    .product-carousel {
+      flex-direction: column;    /* Stack items vertically */
+      gap: 12px;
+    }
+  
+    .arrow-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
+    }
+  
+    .logo-centered,
+    .logo-floating {
+      width: 60px;
+    }
+  }
   

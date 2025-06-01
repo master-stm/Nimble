@@ -16,19 +16,19 @@ const HeroSection = ({ image }) => {
     <div className="mb-4 mb-md-0" style={{ maxWidth: '500px' }}>
       <h1
         className="fw-bold mb-3"
-        style={{ fontSize: '2.5rem', color: '#004C45' }}
+        style={{ fontSize: '2.5rem', color: '#fffff' }}
       >
-        Grocery shopping,<br />now fun & quicker
+        Ready to try Nimble?
       </h1>
-      <p className="text-muted mb-4">
-        Download the Nimble app and be among the first to shop at Neighbors Market
+      <p className="mb-4" style={{  color: '#FFFFFF' }}>
+        Download now and get a free goodie bag at Neighbors Market on June 14th!
       </p>
       <a
         href="/"
         className="btn px-4 py-3 rounded-pill"
         style={{
-          backgroundColor: '#004C45',
-          color: '#fff',
+          backgroundColor: '#A4EC8A',
+          color: '#064E3B',
           fontWeight: 600,
           fontSize: '1.1rem'
         }}
