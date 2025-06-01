@@ -25,7 +25,6 @@ const HeroSection = ({ image }) => {
       </p>
       <a
         href="/"
-        role="link"
         className="btn px-4 py-3 rounded-pill"
         style={{
           backgroundColor: '#004C45',

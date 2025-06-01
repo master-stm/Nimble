@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 import "../styles/Footer.css";
 
-export default function Footer({ bgColor = "#A1EEC5", textColor = "#064E3B" }) {
+export default function Footer({ bgColor = "#fff", textColor = "#064E3B" }) {
   return (
     <footer className="footer" style={{ backgroundColor: bgColor, color: textColor }}>
       <div className="footer-content text-center">
