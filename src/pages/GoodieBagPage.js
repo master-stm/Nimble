@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import ProductCard from '../component/ProductCard';
 import Footer from './Footer';
 import '../styles/GoodieBagPage.css';

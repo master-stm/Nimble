@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useCallback } from 'react';
 import logo_img from '../images/logo_white.png';
 import phone1 from '../images/phone1.png';
 import slide1 from '../images/hero-image-frame.svg'; 
@@ -12,14 +12,13 @@ import '../styles/NLP_Islider.css'
 import FeatureBlock from '../component/FeatureBlock';
 import HeroSection from '../component/HeroSection';
 import Footer from '../pages/Footer';
-import image from '../images/image.png'
 const NimbleLandingPage = () => {
   const slides = [slide1, slide2];
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+  }, [slides.length]);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
@@ -27,7 +26,8 @@ const NimbleLandingPage = () => {
   useEffect(() => {
     const interval = setInterval(nextSlide, 4000); // auto-slide every 4 sec
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
+  
   return (
     <div className="font-sans">
             {/* Navigation Bar */}
@@ -62,7 +62,7 @@ const NimbleLandingPage = () => {
 
                   {/* Right: Download Button */}
                   <a
-                    href="#"
+                    href="/"
                     className="btn btn-success fw-semibold px-4 py-2 rounded-pill"
                     style={{ backgroundColor: '#BBF7D0', color: '#064E3B', border: 'none' }}
                   >
@@ -97,7 +97,7 @@ const NimbleLandingPage = () => {
         Download the Nimble app and be among the first to shop at Neighbors Market
       </p>
       <a
-        href="#"
+        href="/"
         className="btn px-4 py-3 rounded-pill"
         style={{
           backgroundColor: '#004C45',

@@ -1,28 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import ProductCard from '../component/ProductCard';
 
 const CategorySlider = ({ title, products }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showArrows, setShowArrows] = useState(false);
-  const containerRef = useRef(null);
-
-  // Show arrows temporarily on scroll
-  const handleScroll = () => {
-    setShowArrows(true);
-
-    clearTimeout(containerRef.current._scrollTimer);
-    containerRef.current._scrollTimer = setTimeout(() => {
-      setShowArrows(false);
-    }, 2000); // arrows disappear after 2 seconds
-  };
-
-  useEffect(() => {
-    const cardContainer = document.querySelector('.goodie-bag-card');
-    if (!cardContainer) return;
-
-    cardContainer.addEventListener('scroll', handleScroll);
-    return () => cardContainer.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
@@ -33,9 +14,13 @@ const CategorySlider = ({ title, products }) => {
   };
 
   return (
-    <div className="category-slider" ref={containerRef}>
+    <div className="category-slider">
       <h3 className="category-title">{title}</h3>
-      <div className={`product-carousel ${showArrows ? 'show-arrows' : ''}`}>
+      <div
+        className={`product-carousel ${showArrows ? 'show-arrows' : ''}`}
+        onMouseEnter={() => setShowArrows(true)}
+        onMouseLeave={() => setShowArrows(false)}
+      >
         {products.length > 1 && (
           <button onClick={handlePrev} className="arrow-btn">{'<'}</button>
         )}
