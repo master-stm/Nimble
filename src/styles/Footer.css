@@ -1,102 +1,57 @@
-
-html, body, #root {
-  height: 100%;
-  margin: 0;
-}
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.main {
-  flex: 1; 
-}
 .footer {
-  background-color: #005151;
-  padding: 1em 0;
-  border-top: 1px solid #DDDDDD;
-  
-}
-.footer-nav li {
-  display: inline;          
-  margin: 0 0.5em;  
+  background-color: #A8EF8A;
+  padding: 2rem 1rem;
+  border-radius: 6px 6px 0 0;
+  text-align: center;
 }
 
-.footer-nav li::before {
-  content: "•";
-  margin: 0 0.5em;
-  color: #fff;
-}
 .footer-content {
-  max-width: 1280px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 24px;
 }
 
-.footer-social {
-  margin-bottom: 24px;
-}
-
-.social-links {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.social-links a {
-  color: #222222;
-  transition: color 0.2s;
-}
-
-.social-links a:hover {
-  color: #000000;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
+.footer-tagline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.5rem;
 }
 
 .footer-copyright {
-    color: #fff;
-  font-size: 14px;
+  font-size: 0.9rem;
+  color: #222;
+  margin-bottom: 1.5rem;
 }
 
-.footer-nav {
-  
-  list-style: disc inside;
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;    
-  margin-left: auto;  
+  
+
 }
 
-.footer-nav a {
-    color: #fff;
+
+
+
+.footer-social li a {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  background-color: white;   /* white background */
+  color: #004C45;            /* dark green icon */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
-  font-size: 14px;
-  transition: color 0.2s;
 }
 
-.footer-nav a:hover {
-    color: #fff;
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .footer-links {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-nav {
-    justify-content: center;
-    margin-left: 0; 
-  }
+.footer-social li a:hover {
+  background-color: #e0e0e0;  /* subtle hover */
+  color: #004C45;             /* maintain dark green icon */
 }

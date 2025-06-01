@@ -1,0 +1,112 @@
+.goodie-bag-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+  }
+  
+  .goodie-center-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .goodie-card-container {
+    position: relative;
+    max-width: 600px;
+    padding: 40px 20px;
+    width: 100%;
+  } 
+  
+  .logo-floating {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: auto;
+    z-index: 10;
+  }
+  
+  .goodie-header {
+    text-align: center;
+    margin-top: 2px;
+  }
+  
+  
+  .goodie-bag-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    padding: 40px 30px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;            /* ✅ restrict height to viewport */
+    overflow-y: auto;            /* ✅ enables internal scroll */
+    scrollbar-width: thin;       /* optional for Firefox */
+  }
+  
+  .subtitle {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  .product-list {
+    margin-top: 30px;
+  }
+  .category-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .category-slider {
+    margin-bottom: 2.5rem;
+  }
+  
+  .product-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 20px;
+  }
+  
+  
+  .arrow-btn {
+    background-color: #004C45;  /* Deep green */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;           /* Smaller, thinner arrow */
+    font-weight: normal;         /* Not bold */
+    cursor: pointer;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle soft shadow */
+    transition: background-color 0.2s ease;
+    opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  }
+  .show-arrows .arrow-btn {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .arrow-btn:hover {
+    background-color: #066b64;
+  }
+      
+  

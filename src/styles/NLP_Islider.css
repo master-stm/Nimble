@@ -1,0 +1,122 @@
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0;
+    background-image: url('../images/image.png'); /* update path if needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-btn {
+    display: none !important;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: none;
+  }
+  
+  .carousel-slide.active {
+    opacity: 1;
+    display: block;
+  }
+  
+  .slide-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  .slide-image {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .slide-text {
+    max-width: 400px;
+  }
+  
+  .slide-text h2 {
+    color: #004C45;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  
+  .slide-text p {
+    margin-top: 0.5rem;
+    color: #333;
+  }
+  
+  .download-btn {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #BBF7D0;
+    color: #064E3B;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .terms {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+  }
+  
+  /* Buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #064E3B;
+    cursor: pointer;
+    padding: 0 1rem;
+    z-index: 1;
+  }
+  
+  .carousel-btn.prev {
+    left: 0;
+  }
+  
+  .carousel-btn.next {
+    right: 0;
+  }
+  
+  /* Dots */
+  .carousel-dots {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 40px;              /* elongated bar */
+    height: 6px;              /* short height */
+    margin: 0 6px;
+    background-color: #E8F8E4; /* light green like in image */
+    border-radius: 6px;       /* rounded ends */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #004C45; /* dark teal active dot */
+  }
+  
+  
