@@ -158,6 +158,7 @@ const NimbleLandingPage = () => {
             </div>
       </section>
       {/* Custom Promo Slider */}
+      <div className="carousel-viewport">
       <section className={`carousel-wrapper slide-${currentSlide}`}>
           <div className="carousel-slides">
             {slides.map((slide, index) => (
@@ -195,6 +196,7 @@ const NimbleLandingPage = () => {
             ))}
           </div>
         </section>
+        </div>
 
 
       <section className="features-wrapper">

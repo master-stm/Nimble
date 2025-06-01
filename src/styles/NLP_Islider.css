@@ -10,6 +10,21 @@
   min-height: 400px;
 
 }
+.carousel-viewport {
+  overflow-x: hidden;
+  padding: 0 2rem; /* adjust as needed */
+  position: relative;
+}
+
+.carousel-wrapper {
+  position: relative;
+  padding: 4rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 2rem 1rem; 
+  border-radius: 1.5rem; /* optional: keep rounded look */
+}
 
 .carousel-slide.slide-0 {
   background-image: url('../images/banner.png');
@@ -86,7 +101,8 @@
   .features-heading{
     display: flex;
     justify-content: start;
-    color: #030000;
+    color: #030000 !important; 
+    margin-left: 30px;
   }
   .download-btn {
     margin-top: 1rem;
