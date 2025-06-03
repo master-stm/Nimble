@@ -6,9 +6,9 @@ export default function Footer({ bgColor = "#fff", textColor = "#064E3B" }) {
   return (
     <footer className="footer" style={{ backgroundColor: bgColor, color: textColor }}>
       <div className="footer-content text-center">
-        <p className="footer-tagline" style={{ color: textColor }}>
+        {/* <p className="footer-tagline" style={{ color: textColor }}>
           Shop fast, shop smart, shop Nimble
-        </p>
+        </p> */}
         <p className="footer-copyright" style={{ color: textColor }}>
           © {new Date().getFullYear()} Motura Inc., Operating under the trade name Nimble. All rights reserved
         </p>

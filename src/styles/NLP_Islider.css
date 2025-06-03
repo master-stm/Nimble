@@ -1,3 +1,4 @@
+/* ─── Existing Styles (unchanged) ─── */
 .carousel-slide {
   background-color: #fff;
   background-size: cover;
@@ -6,26 +7,22 @@
   border-radius: 1.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-
   min-height: 400px;
-
 }
 .carousel-viewport {
   overflow-x: hidden;
   padding: 0 2rem; /* adjust as needed */
   position: relative;
 }
-
 .carousel-wrapper {
   position: relative;
   padding: 4rem 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 2rem 1rem; 
+  margin: 2rem 1rem;
   border-radius: 1.5rem; /* optional: keep rounded look */
 }
-
 .carousel-slide.slide-0 {
   background-image: url('../images/banner.png');
 }
@@ -35,133 +32,182 @@
 .carousel-slide.slide-2 {
   background-image: url('../images/banner3.png');
 }
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-btn {
+  display: none !important;
+}
+.carousel-slide {
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: none;
+}
+.carousel-slide.active {
+  opacity: 1;
+  display: block;
+}
+.slide-content {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 200px;
+  padding: 2rem 1rem;
+}
+.slide-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1100px; /* Card width */
+}
+.slide-image {
+  max-width: 300px;
+  height: auto;
+}
+.slide-text {
+  max-width: 400px;
+}
+.slide-text h2 {
+  color: #004C45;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.slide-text p {
+  margin-top: 0.5rem;
+  color: #333;
+}
+.features-heading {
+  display: flex;
+  justify-content: start;
+  color: #030000 !important;
+  margin-left: 30px;
+}
+.download-btn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #074F51;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #064E3B;
+  cursor: pointer;
+  padding: 0 1rem;
+  z-index: 1;
+}
+.carousel-btn.prev {
+  left: 0;
+}
+.carousel-btn.next {
+  right: 0;
+}
+/* Dots */
+.carousel-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+.dot {
+  display: inline-block;
+  width: 40px;              /* elongated bar */
+  height: 6px;              /* short height */
+  margin: 0 6px;
+  background-color: #E8F8E4; /* light green like in image */
+  border-radius: 6px;       /* rounded ends */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.dot.active {
+  background-color: #004C45; /* dark teal active dot */
+}
+.image_banner-1 {
+  width: 440px;
+  height: 440px;
+  margin-right: 140px;
+}
 
-  .carousel-slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+
+/* ─── MOBILE RESPONSIVE OVERRIDES ─── */
+@media (max-width: 768px) {
+  /* Make .slide-content stack vertically and center on mobile */
+  .slide-content {
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0;
+    padding: 1rem;
+    text-align: center;
   }
-  
+
+  /* Shrink the slide heading and copy on small screens */
+  .slide-text h2 {
+    font-size: 1.4rem;
+  }
+  .slide-text p {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust Download button spacing */
+  .download-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Make the image smaller and centered */
+  .image_banner-1 {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 1rem auto 0;
+  }
+
+  /* Ensure carousel-wrapper padding is reduced */
+  .carousel-wrapper {
+    padding: 2rem 0;
+    margin: 1rem 0;
+  }
+
+  /* Hide carousel-nav arrows on mobile */
   .carousel-btn {
     display: none !important;
   }
-  
-  .carousel-slide {
-    min-width: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    display: none;
-  }
-  
-  .carousel-slide.active {
-    opacity: 1;
-    display: block;
-  }
-  .slide-content {
-    display: flex;
-    justify-content: end;
-    margin-right: 200px;
-    padding: 2rem 1rem;
-  }
-  
-  .slide-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    background-color: #fff;
-    border-radius: 1.5rem;
-    padding: 2rem;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 1100px; /* Card width */
-  }
-  
-  
-  .slide-image {
-    max-width: 300px;
-    height: auto;
-  }
-  
-  .slide-text {
-    max-width: 400px;
-  }
-  
-  .slide-text h2 {
-    color: #004C45;
-    font-weight: 600;
-    font-size: 1.8rem;
-  }
-  
-  .slide-text p {
-    margin-top: 0.5rem;
-    color: #333;
-  }
-  .features-heading{
-    display: flex;
-    justify-content: start;
-    color: #030000 !important; 
-    margin-left: 30px;
-  }
-  .download-btn {
-    margin-top: 1rem;
-    padding: 10px 20px;
-    background-color: #074F51;
-    color: #ffffff;
-    border: none;
-    border-radius: 999px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  
-  .terms {
-    font-size: 0.8rem;
-    color: #888;
-    margin-top: 0.5rem;
-  }
-  
-  /* Buttons */
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #064E3B;
-    cursor: pointer;
-    padding: 0 1rem;
-    z-index: 1;
-  }
-  
-  .carousel-btn.prev {
-    left: 0;
-  }
-  
-  .carousel-btn.next {
-    right: 0;
-  }
-  
-  /* Dots */
+
+  /* Center the dots under each mobile slide */
   .carousel-dots {
-    text-align: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
-  
-  .dot {
-    display: inline-block;
-    width: 40px;              /* elongated bar */
-    height: 6px;              /* short height */
-    margin: 0 6px;
-    background-color: #E8F8E4; /* light green like in image */
-    border-radius: 6px;       /* rounded ends */
-    cursor: pointer;
-    transition: background-color 0.3s;
+  .carousel-slide.slide-0 {
+    background-image: url('../images/banner1-mobile.png');
   }
-  
-  .dot.active {
-    background-color: #004C45; /* dark teal active dot */
+  .carousel-slide.slide-1 {
+    background-image: url('../images/banner1-mobile.png');
   }
-  
-  
+  .carousel-slide.slide-2 {
+    background-image: url('../images/banner1-mobile.png');
+  }
+  .carousel-slide {
+    min-height: 610px!important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+      height: 500px; /* ensures no collapse below 500px */
+    
+  }
+}

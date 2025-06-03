@@ -87,4 +87,53 @@
     text-align: center;
   }
   
-  
+  /* ─── MOBILE LAYOUT OVERRIDES (<768px) ─── */
+@media (max-width: 768px) {
+  /* Stack everything vertically instead of side-by-side */
+  .feature-container {
+    flex-direction: column !important;
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  /* Ensure reverse mode also stacks in the same way */
+  .feature-container.reverse {
+    flex-direction: column !important;
+  }
+
+  /* Left block (icon + text) spans full width */
+  .feature-left {
+    width: 100%;
+  }
+
+  /* Keep icon-box, h3, and p left-aligned */
+  .icon-box {
+    margin: 0 0 1rem 0;
+  }
+  .feature-left h3,
+  .feature-left p {
+    text-align: left;
+  }
+
+  /* Right block (image + floating icon) spans full width and center-aligns the image */
+  .feature-right {
+    width: 100%;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  /* Shrink the mockup image slightly on mobile */
+  .main-mockup {
+    max-width: 260px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+  }
+
+  /* Adjust floating icon position: center it above the image */
+  .floating-icon {
+    top: 10px;
+    left: calc(50% - 25px); /* centers a 50px-wide icon */
+  }
+}

@@ -1,0 +1,124 @@
+/* ─── Wrapper & Global Styles ─── */
+.app-footer {
+    background-color: #FFFFFF;
+    color: #064E3B; /* dark teal text for headings/links */
+    padding: 2rem 1rem;
+    max-width: 360px; /* match the approximate width shown in your mobile screenshot */
+    margin: auto;     /* center it in its parent container */
+    font-family: 'Lato', sans-serif;
+  }
+  
+  /* ─── 1) Top Links (“Shop Fast” / “Shop Smart” / “Shop Nimble”) ─── */
+  .footer-top-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-top-links .footer-link {
+    color: #064E3B;
+    text-decoration: none;
+    font-size: 1.125rem; /* ~18px */
+    font-weight: 600;
+  }
+  
+  .footer-top-links .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* ─── 2) “Get the app” Section ─── */
+  .footer-get-app {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .footer-get-app .footer-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #064E3B;
+    text-transform: uppercase;
+  }
+  
+  .footer-get-app .store-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
+  .footer-get-app .store-badge img {
+    width: 140px;   /* scale the badge as needed */
+    height: auto;
+    display: block;
+  }
+  
+  /* ─── 3) “Contact us” Section ─── */
+  .footer-contact {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #F0F8F5; /* very light mint-green background */
+    border-radius: 8px;
+  }
+  
+  .footer-contact .footer-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #064E3B;
+    text-transform: uppercase;
+  }
+  
+  .footer-contact .contact-text {
+    font-size: 0.875rem; /* ~14px */
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    color: #555555;
+  }
+  
+  .footer-contact .contact-email {
+    font-size: 0.875rem;
+    color: #064E3B;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .footer-contact .contact-email:hover {
+    text-decoration: underline;
+  }
+  
+  /* ─── 4) “Socials” Section ─── */
+  .footer-socials {
+    text-align: left;
+  }
+  
+  .footer-socials .footer-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #064E3B;
+    text-transform: uppercase;
+  }
+  
+  .footer-socials .social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .footer-socials .social-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    object-fit: contain;
+  }
+  
+  /* ─── Responsive Adjustments (optional) ─── */
+  @media (min-width: 576px) {
+    /* If you want the entire footer to be wider on larger screens, override max-width */
+    .app-footer {
+      max-width: 480px;
+    }
+  }
+  

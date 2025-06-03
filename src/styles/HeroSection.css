@@ -1,0 +1,84 @@
+/* HeroSection.css */
+
+/* --------------------------------------------------------
+   Base styles (desktop and up)
+   -------------------------------------------------------- */
+   .hero-text h1 span {
+    /* inherits colors from inline styles */
+  }
+  
+  .hero-subtext {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Download button styling */
+  .hero-download {
+    background-color: #A4EC8A;
+    color: #004C45;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+  }
+  
+  /* Image container for desktop: align to the right */
+  .hero-image-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  /* The mockup image: for desktop we can permit it to be larger */
+  .image_banner-1 {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+  
+  /* --------------------------------------------------------
+     Mobile‐only overrides (max-width: 767px)
+     -------------------------------------------------------- */
+  @media (max-width: 767px) {
+    .container {
+      /* Stack everything vertically on mobile */
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center;
+    }
+  
+    /* Text block spans full width */
+    .hero-text {
+      width: 100%;
+    }
+    .hero-text h1 {
+      font-size: 2rem; /* slightly smaller on mobile */
+    }
+    .hero-subtext {
+      font-size: 0.9rem;
+    }
+  
+    /* Center the Download button and give spacing */
+    .hero-download {
+      display: inline-block;
+      margin: 0 auto 1.5rem auto;
+      padding: 10px 24px;
+      font-size: 1rem;
+    }
+  
+    /* Image wrapper on mobile: center everything */
+    .hero-image-wrapper {
+      width: 100%;
+      margin-top: 1rem;
+      justify-content: center !important;
+    }
+  
+    /* Shrink the mockup image on mobile */
+    .image_banner-1 {
+      max-width: 240px;
+      width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
