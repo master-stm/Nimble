@@ -1,13 +1,12 @@
 import React from 'react';
-import '../styles/HeroSection.css';
 
 const HeroSection = ({
   image,
   image2,
   firstline,
   secondline,
-  firstLineColor,
-  secondLineColor,
+  firstLineColor ,
+  secondLineColor 
 }) => {
   return (
     <section
@@ -20,35 +19,32 @@ const HeroSection = ({
         padding: '5rem 0',
       }}
     >
-      <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between" >
         {/* Left Content */}
-        <div className="hero-text mb-4 mb-md-0" style={{ maxWidth: '500px' }}>
+        <div className="mb-4 mb-md-0" style={{ maxWidth: '500px' }}>
           <h1
             className="fw-bold mb-3"
             style={{ fontSize: '2.5rem', color: firstLineColor }}
           >
             {firstline},<br />
-            <span style={{ color: secondLineColor }}>now fun & quicker</span>
+            <span >now fun & quicker</span>
           </h1>
-          <p className="hero-subtext mb-4" style={{ color: secondLineColor }}>
-            {secondline}
-          </p>
-          {/* Download button visible on all breakpoints */}
+          <p className="mb-4" style={{ color: secondLineColor }}>{secondline} </p>
           <a
             href="/"
-            className="btn hero-download px-4 py-3 rounded-pill"
+            className="btn px-4 py-3 rounded-pill"
+            style={{
+              backgroundColor: '#A4EC8A',
+              color: '#004C45',
+              fontWeight: 600,
+              fontSize: '1.1rem'
+            }}
           >
             Download Now
           </a>
         </div>
-
-        {/* Image: will center on mobile, align right on desktop */}
-        <div className="hero-image-wrapper">
-          <img
-            className="image_banner-1"
-            src={image}
-            alt="phone mockup"
-          />
+        <div>
+          <img className="image_banner-1"  src={image} alt="phone" height="30" />
         </div>
       </div>
     </section>

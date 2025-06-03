@@ -1,12 +1,12 @@
 import React, { useState, useEffect,useCallback } from 'react';
 import logo_img from '../images/logo_white.png';
-
+import Header from '../component/Header'
 import phone0 from '../images/phone1.png';
 import slide2 from '../images/logo.svg'; 
 import feature1 from '../images/feature1.png'; 
-import women from '../images/women.png'; 
+import image2 from '../images/women.png'; 
 import feature2 from '../images/feature2.png'; 
-import back_frame from '../images/rectangle.png'; 
+import back_frame from '../images/back.png'; 
 import feature3 from '../images/feature3.png'; 
 import '../styles/NLP_Islider.css'
 import FeatureBlock from '../component/FeatureBlock';
@@ -47,99 +47,7 @@ const NimbleLandingPage = () => {
   return (
     <div className="font-sans">
             {/* Navigation Bar */}
-            <header className="sticky-top bg-teal-900">
-      <nav className="navbar navbar-expand-lg navbar-dark">
-        <div className="container d-flex align-items-center justify-content-between">
-
-          {/* ─── Logo ─── */}
-          <a className="navbar-brand me-4" href="/">
-            <img src={logo_img} alt="Nimble Logo" height="30" />
-          </a>
-
-          {/* ─── Desktop‐only Links (hidden on <lg) ─── */}
-          <div className="d-none d-lg-flex align-items-center">
-            <a
-              className="nav-link text-white fw-semibold me-3"
-              href="#features"
-              style={{ fontFamily: 'Lato, sans-serif' }}
-            >
-              Features
-            </a>
-            <a
-              className="nav-link text-white fw-semibold"
-              href="#offers"
-              style={{ fontFamily: 'Lato, sans-serif' }}
-            >
-              Offers
-            </a>
-          </div>
-
-          {/* ─── Download button (always visible) ─── */}
-          <a
-            href="/"
-            className="btn fw-semibold px-4 py-2 rounded-pill mx-2"
-            style={{
-              backgroundColor: '#BBF7D0',
-              color: '#064E3B',
-              border: 'none',
-              fontSize: '0.9rem',
-            }}
-          >
-            Download Now
-          </a>
-
-          {/* ─── Hamburger Toggler (visible only on mobile <lg) ─── */}
-          <button
-            className="navbar-toggler d-lg-none border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mobileNav"
-            aria-controls="mobileNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="26"
-                height="26"
-                fill="#fff"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M1.5 12a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-3.5a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-3.5a.5.5 0 010-1h13a.5.5 0 010 1h-13z"
-                />
-              </svg>
-            </span>
-          </button>
-        </div>
-
-        {/* ─── Collapsed Mobile Menu (<lg) ─── */}
-        <div className="collapse navbar-collapse d-lg-none" id="mobileNav">
-          <ul className="navbar-nav ps-3">
-            <li className="nav-item">
-              <a
-                className="nav-link text-white fw-semibold"
-                href="#features"
-                style={{ fontFamily: 'Lato, sans-serif' }}
-              >
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link text-white fw-semibold"
-                href="#offers"
-                style={{ fontFamily: 'Lato, sans-serif' }}
-              >
-                Offers
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+              <Header image={logo_img} />
 
             {/* You can now continue with the rest of the page sections below */}
             {/* Hero Section */}
@@ -309,7 +217,7 @@ const NimbleLandingPage = () => {
             </section>
 
     
-      <HeroSection image={women} colors={["#fffff", "#fffff"]} image2={back_frame} firstline ="Grocery shopping,
+      <HeroSection image={image2} colors={["#fffff", "#fffff"]} image2={back_frame} firstline ="Grocery shopping,
 now fun & quicker" secondline="Download the Nimble app and be among the first to shop at Neighbors Market" />
 <AppFooter />
       <Footer bgColor="#A4EC8A" textColor="#064E3B" />

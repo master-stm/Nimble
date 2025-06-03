@@ -1,0 +1,56 @@
+/* Dark teal background */
+.bg-teal-900 {
+    background-color: #064E3B !important;
+  }
+  
+  /* Download button styling */
+  .header-download-btn {
+    background-color: #BBF7D0;
+    color: #064E3B;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+  }
+  .header-download-btn:hover {
+    background-color: #A4EC8A;
+    color: #064E3B;
+  }
+  
+  /* Always keep container as one row, no wrapping */
+  .navbar .container-fluid {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* ─── Desktop (≥992px) ─── */
+  @media (min-width: 992px) {
+    /* Hide the hamburger on desktop */
+    .navbar-toggler {
+      display: none;
+    }
+  }
+  
+  /* ─── Mobile/Tablet (<992px) ─── */
+  @media (max-width: 991px) {
+    /* Hide the inline Features/Offers links */
+    .d-lg-flex {
+      display: none !important;
+    }
+  
+    /* Reduce side padding so Download + ☰ hug the right edge */
+    .navbar .container-fluid {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  
+    /* Slightly shrink the Download button */
+    .header-download-btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
+  
