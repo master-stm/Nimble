@@ -1,4 +1,4 @@
-/* ─── Existing Styles (unchanged) ─── */
+
 .carousel-slide {
   background-color: #fff;
   background-size: cover;
@@ -7,6 +7,7 @@
   border-radius: 1.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  min-width: 100%;
   min-height: 400px;
 }
 .carousel-viewport {
@@ -203,11 +204,12 @@
     background-image: url('../images/banner1-mobile.png');
   }
   .carousel-slide {
-    min-height: 610px!important;
+    width: 343px;
+    height: 610px;
     background-size: contain !important;
     background-repeat: no-repeat;
     background-position: center;
-      height: 500px; /* ensures no collapse below 500px */
-    
+   
+
   }
 }

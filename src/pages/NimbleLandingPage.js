@@ -6,7 +6,7 @@ import slide2 from '../images/logo.svg';
 import feature1 from '../images/feature1.png'; 
 import image2 from '../images/women.png'; 
 import feature2 from '../images/feature2.png'; 
-import back_frame from '../images/back.png'; 
+import back_frame from '../images/bg.png'; 
 import feature3 from '../images/feature3.png'; 
 import '../styles/NLP_Islider.css'
 import FeatureBlock from '../component/FeatureBlock';
@@ -88,18 +88,7 @@ const NimbleLandingPage = () => {
       Download Now
     </a>
   </div>
-
-  {/* Middle: Image */}
-  <div className="mb-4 mb-md-0 text-center text-md-start">
-    <img
-      className="image_banner-1"
-      src={phone0}
-      alt="phone"
-      style={{ maxWidth: '100%', height: 'auto' }}
-    />
-  </div>
-
-  {/* Mobile-only Download Button (visible <md) */}
+        {/* Mobile-only Download Button (visible <md) */}
   <div className="d-block d-md-none text-center">
     <a
       href="/"
@@ -114,6 +103,17 @@ const NimbleLandingPage = () => {
       Download Now
     </a>
   </div>
+  {/* Middle: Image */}
+  <div className="mb-4 mb-md-0 text-center text-md-start">
+    <img
+      className="image_banner-1"
+      src={phone0}
+      alt="phone"
+      style={{ maxWidth: '100%', height: 'auto' }}
+    />
+  </div>
+
+  
 </div>
 
 </section>
@@ -152,7 +152,7 @@ const NimbleLandingPage = () => {
       </section>
       {/* Custom Promo Slider */}
       <div className="carousel-viewport">
-      <section className={`carousel-wrapper slide-${currentSlide}`}>
+        <section className={`carousel-wrapper slide-${currentSlide}`}>
           <div className="carousel-slides">
             {slides.map((slide, index) => (
               <div
@@ -217,8 +217,7 @@ const NimbleLandingPage = () => {
             </section>
 
     
-      <HeroSection image={image2} colors={["#fffff", "#fffff"]} image2={back_frame} firstline ="Grocery shopping,
-now fun & quicker" secondline="Download the Nimble app and be among the first to shop at Neighbors Market" />
+      <HeroSection image={image2} colors={["#fffff", "#fffff"]} image2={back_frame} firstline ="Ready to try Nimble?" secondline="Download now and get a free goodie bag at Neighbors Market on June 14th!" />
 <AppFooter />
       <Footer bgColor="#A4EC8A" textColor="#064E3B" />
 

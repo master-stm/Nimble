@@ -4,7 +4,7 @@ import './header.css';
 const Header = ({ image }) => {
   return (
     <header className="sticky-top bg-teal-900">
-      <nav className="navbar navbar-dark">
+      <nav className="navbar navbar-dark p-2">
         <div
           className="
             container-fluid px-2
