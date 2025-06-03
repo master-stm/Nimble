@@ -47,46 +47,99 @@ const NimbleLandingPage = () => {
   return (
     <div className="font-sans">
             {/* Navigation Bar */}
-            <header className="sticky-top bg-teal-900 ">
-              <nav className="navbar navbar-expand-lg">
-                <div className="container d-flex justify-content-between align-items-center">
-                  {/* Left: Logo + Nav Links */}
-                  <div className="d-flex align-items-center">
-                    <a className="navbar-brand me-4" href="/">
-                      <img
-                        src={logo_img}
-                        alt="Nimble Logo"
-                        height="30"
-                      />
-                    </a>
-                    <a
-                      className="nav-link text-white fw-semibold me-3"
-                      href="#features"
-                      style={{ fontFamily: 'Lato, sans-serif' }}
-                    >
-                      Features
-                    </a>
-                    <a
-                      className="nav-link text-white fw-semibold me-3"
-                      href="#offers"
-                      style={{ fontFamily: 'Lato, sans-serif' }}
-                    >
-                      Offers
-                    </a>
-                    
-                  </div>
+            <header className="sticky-top bg-teal-900">
+      <nav className="navbar navbar-expand-lg navbar-dark">
+        <div className="container d-flex align-items-center justify-content-between">
 
-                  {/* Right: Download Button */}
-                  <a
-                    href="/"
-                    className="btn btn-success fw-semibold px-4 py-2 rounded-pill"
-                    style={{ backgroundColor: '#BBF7D0', color: '#064E3B', border: 'none' }}
-                  >
-                    Download Now
-                  </a>
-                </div>
-              </nav>
-            </header>
+          {/* ─── Logo ─── */}
+          <a className="navbar-brand me-4" href="/">
+            <img src={logo_img} alt="Nimble Logo" height="30" />
+          </a>
+
+          {/* ─── Desktop‐only Links (hidden on <lg) ─── */}
+          <div className="d-none d-lg-flex align-items-center">
+            <a
+              className="nav-link text-white fw-semibold me-3"
+              href="#features"
+              style={{ fontFamily: 'Lato, sans-serif' }}
+            >
+              Features
+            </a>
+            <a
+              className="nav-link text-white fw-semibold"
+              href="#offers"
+              style={{ fontFamily: 'Lato, sans-serif' }}
+            >
+              Offers
+            </a>
+          </div>
+
+          {/* ─── Download button (always visible) ─── */}
+          <a
+            href="/"
+            className="btn fw-semibold px-4 py-2 rounded-pill mx-2"
+            style={{
+              backgroundColor: '#BBF7D0',
+              color: '#064E3B',
+              border: 'none',
+              fontSize: '0.9rem',
+            }}
+          >
+            Download Now
+          </a>
+
+          {/* ─── Hamburger Toggler (visible only on mobile <lg) ─── */}
+          <button
+            className="navbar-toggler d-lg-none border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileNav"
+            aria-controls="mobileNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                fill="#fff"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M1.5 12a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-3.5a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-3.5a.5.5 0 010-1h13a.5.5 0 010 1h-13z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        {/* ─── Collapsed Mobile Menu (<lg) ─── */}
+        <div className="collapse navbar-collapse d-lg-none" id="mobileNav">
+          <ul className="navbar-nav ps-3">
+            <li className="nav-item">
+              <a
+                className="nav-link text-white fw-semibold"
+                href="#features"
+                style={{ fontFamily: 'Lato, sans-serif' }}
+              >
+                Features
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link text-white fw-semibold"
+                href="#offers"
+                style={{ fontFamily: 'Lato, sans-serif' }}
+              >
+                Offers
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
             {/* You can now continue with the rest of the page sections below */}
             {/* Hero Section */}
