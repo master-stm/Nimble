@@ -16,7 +16,7 @@ import AppFooter from '../component/AppFooter';
 import Countdown from '../component/Countdown';
 import one from '../images/one.png'
 import two from '../images/two.png'
-import three from '../images/three.png'
+
 const NimbleLandingPage = () => {
 
   const slides = [
