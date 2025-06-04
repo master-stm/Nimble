@@ -22,7 +22,7 @@
   background-repeat: no-repeat;
   background-position: center;
   margin: 2rem 1rem;
-  border-radius: 1.5rem; /* optional: keep rounded look */
+  border-radius: 1.5rem; 
 }
 .carousel-slide.slide-0 {
   background-image: url('../images/banner.png');
@@ -161,7 +161,8 @@
   }
   .slide-text {
     max-width: 400px;
-  margin-top: 170px;
+    margin-top: 30px;
+
   }
   /* Shrink the slide heading and copy on small screens */
   .slide-text h2 {
@@ -225,13 +226,11 @@
   .carousel-slide {
     width: 90vw;
     max-width: 343px;
-    height: calc(90vw * (610 / 343)); /* maintain 343:610 aspect ratio */
+    height: 900px;
     margin: 0 auto;
     border-radius: 1.5rem;
-    background-size: contain;      /* key: fit the image inside */
-    background-repeat: no-repeat;
-    background-position: center;
+
     background-color: #fff;
-    padding: 2rem;
+    padding: 1rem 1.5rem 2rem 1.5rem; 
   }
 }

@@ -17,12 +17,11 @@ const HeroSection = ({
       sectionRef.current.style.setProperty('--mobile-hero-background', `url(${image2Mobile})`);
     }
   }, [image2Mobile]);
-  
   return (
     <section
       ref={sectionRef}
       className="hero-section text-white"
-      style={{
+style={{
         backgroundImage: `url(${image2})`
       }}
     >
