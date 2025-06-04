@@ -1,0 +1,45 @@
+.store-button {
+  display: flex;
+
+  justify-content: center;
+  background-color: #07554d;
+  border-radius: 999px;
+  gap: 0.6rem;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  transition: background-color 0.3s ease;
+  height: 44px;
+  min-width: 144px;
+}
+
+.store-button:hover {
+  background-color: #064E3B;
+}
+.store-outer{
+  display: flex;
+  align-items: center;
+}
+.store-icon {
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0;
+}
+
+.store-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1;
+  color: #A4EC8A;
+}
+
+.store-text .line1 {
+  font-size: 0.68rem;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.store-text .line2 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}

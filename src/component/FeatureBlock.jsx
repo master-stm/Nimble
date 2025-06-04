@@ -1,15 +1,15 @@
 import React from 'react';
 import '../styles/FeatureBlock.css';
 
-const FeatureBlock = ({ icon, title, text, image, reverse }) => {
+const FeatureBlock = ({ sicon, title, text, image, reverse }) => {
   return (
     <section className="feature-section-wrapper">
       <div className={`feature-container ${reverse ? 'reverse' : ''}`}>
         
         {/* Left: Icon + Text */}
         <div className="feature-left">
-          <div className="icon-box">
-            
+          <div className="icon-box" >
+            <img src={sicon} alt="icon"  className="img" /> 
           </div>
           <h3>{title}</h3>
           <p>{text}</p>

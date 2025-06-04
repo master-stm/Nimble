@@ -1,75 +1,75 @@
 import React from 'react';
-import './AppFooter.css'; // Make sure to import the CSS file
-
-import appStoreBadge from '../images/bev.png';
-import playStoreBadge from '../images/bev.png';
-import linkedinIcon from '../images/bev.png';
-import instagramIcon from '../images/bev.png';
+import './AppFooter.css';
+import StoreButton from './StoreButton';
+import appStoreBadge from '../images/apple.png';
+import playStoreBadge from '../images/playstore.png';
+import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const AppFooter = () => {
   return (
     <footer className="app-footer">
-      {/* ─── Top Links: Shop Fast / Shop Smart / Shop Nimble ─── */}
-      <nav className="footer-top-links">
-        <a href="/shop-fast" className="footer-link">Shop Fast</a>
-        <a href="/shop-smart" className="footer-link">Shop Smart</a>
-        <a href="/shop-nimble" className="footer-link">Shop Nimble</a>
-      </nav>
+      {/* Column 1: Shop links */}
+      <div className="footer-col footer-links">
+        <a href="/shop-fast">Shop Fast</a>
+        <a href="/shop-smart">Shop Smart</a>
+        <a href="/shop-nimble">Shop Nimble</a>
+      </div>
 
-      {/* ─── “Get the app” Section ─── */}
-      <section className="footer-get-app">
-        <h4 className="footer-heading">Get the app</h4>
-        <div className="store-buttons">
-          <a
-            href="https://apps.apple.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="store-badge"
-          >
-            <img src={appStoreBadge} alt="Download on App Store" />
-          </a>
-          <a
-            href="https://play.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="store-badge"
-          >
-            <img src={playStoreBadge} alt="Get it on Google Play" />
-          </a>
-        </div>
-      </section>
+      {/* Column 2: Store badges */}
+      <div className="footer-col footer-download-outer">
+      <p style={{ color: 'black' ,
+                  fontWeight: 600 
+                  
+                  }}>Get the app</p>
 
-      {/* ─── “Contact us” Section ─── */}
-      <section className="footer-contact">
-        <h4 className="footer-heading">Contact us</h4>
-        <p className="contact-text">
-          Need help with the app? Reach out anytime—we’re happy to assist!
-        </p>
-        <a href="mailto:sales@getnimbleapp.com" className="contact-email">
-          sales@getnimbleapp.com
-        </a>
-      </section>
+      <div className="footer-col footer-download">
+   
+   
+          <StoreButton
+  logo={appStoreBadge}
+  line1="Download on"
+  line2="App store"
+  link="https://apps.apple.com"
+/>
 
-      {/* ─── “Socials” Section ─── */}
-      <section className="footer-socials">
-        <h4 className="footer-heading">Socials</h4>
-        <div className="social-icons">
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={instagramIcon} alt="Instagram" className="social-icon" />
-          </a>
-        </div>
-      </section>
+   
+        <StoreButton
+  logo={playStoreBadge}
+  line1="Download on"
+  line2="App store"
+  link="https://apps.apple.com"
+/>
+
+      </div>
+      </div>
+      {/* Column 3: Text links + email */}
+      <div className="footer-col footer-contact">
+  <p className="footer-contact-heading">Contact us</p>
+  <p className="footer-contact-text">
+    Need help with the app? Reach out<br />
+    anytime — we're happy to assist
+  </p>
+  <a href="mailto:sales@getnimbleapp.com" className="footer-contact-email">
+    sales@getnimbleapp.com
+  </a>
+</div>
+
+
+      {/* Column 4: Social icons */}
+<div className='footer-social-outer'>
+<p style={{ color: 'black' ,
+                  fontWeight: 600 
+                  
+                  }}>Socials</p>
+              <ul className="footer-social">
+
+
+              <li><a href="https://www.linkedin.com"target="_blank" rel="noreferrer" ><FaLinkedin /></a></li>
+                <li><a href="https://www.instagram.com"target="_blank" rel="noreferrer" ><FaInstagram /></a></li>
+
+
+              </ul>
+              </div>
     </footer>
   );
 };

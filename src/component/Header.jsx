@@ -27,14 +27,14 @@ const Header = ({ image }) => {
               <a
                 className="nav-link text-white fw-semibold me-3"
                 href="#features"
-                style={{ fontFamily: 'Lato, sans-serif' }}
+ 
               >
                 Features
               </a>
               <a
                 className="nav-link text-white fw-semibold"
                 href="#offers"
-                style={{ fontFamily: 'Lato, sans-serif' }}
+
               >
                 Offers
               </a>
@@ -86,7 +86,7 @@ const Header = ({ image }) => {
               <a
                 className="nav-link text-white fw-semibold"
                 href="#features"
-                style={{ fontFamily: 'Lato, sans-serif' }}
+           
               >
                 Features
               </a>
@@ -95,7 +95,7 @@ const Header = ({ image }) => {
               <a
                 className="nav-link text-white fw-semibold"
                 href="#offers"
-                style={{ fontFamily: 'Lato, sans-serif' }}
+
               >
                 Offers
               </a>

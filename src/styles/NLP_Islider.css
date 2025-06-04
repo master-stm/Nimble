@@ -7,7 +7,7 @@
   border-radius: 1.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  min-width: 100%;
+  width: 100%;
   min-height: 400px;
 }
 .carousel-viewport {
@@ -76,6 +76,7 @@
 }
 .slide-text {
   max-width: 400px;
+
 }
 .slide-text h2 {
   color: #004C45;
@@ -140,9 +141,11 @@
   background-color: #004C45; /* dark teal active dot */
 }
 .image_banner-1 {
-  width: 440px;
-  height: 440px;
-  margin-right: 140px;
+  width: 100%;
+  max-width: 280px; /* scale within card */
+  height: auto;
+  margin: 2rem auto 0;
+  display: block;
 }
 
 
@@ -156,19 +159,28 @@
     padding: 1rem;
     text-align: center;
   }
-
+  .slide-text {
+    max-width: 400px;
+  margin-top: 170px;
+  }
   /* Shrink the slide heading and copy on small screens */
   .slide-text h2 {
-    font-size: 1.4rem;
+    font-size: 2.0rem;
   }
-  .slide-text p {
-    font-size: 0.9rem;
-  }
+  /* .slide-text p {
+    font-size: 1.1rem;
+  } */
 
   /* Adjust Download button spacing */
   .download-btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #A4EC8A;
+    color: #074F51;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
   }
 
   /* Make the image smaller and centered */
@@ -195,21 +207,31 @@
     margin-top: 0.5rem;
   }
   .carousel-slide.slide-0 {
-    background-image: url('../images/banner1-mobile.png');
+    background-image: url('../images/banner_mobile.png');
   }
   .carousel-slide.slide-1 {
-    background-image: url('../images/banner1-mobile.png');
+    background-image: url('../images/banner_mobile.png');
   }
   .carousel-slide.slide-2 {
-    background-image: url('../images/banner1-mobile.png');
+    background-image: url('../images/banner_mobile.png');
+  }
+  .slide-img {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    object-fit: contain;
+    margin-top: auto;
   }
   .carousel-slide {
-    width: 343px;
-    height: 610px;
-    background-size: contain !important;
+    width: 90vw;
+    max-width: 343px;
+    height: calc(90vw * (610 / 343)); /* maintain 343:610 aspect ratio */
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    background-size: contain;      /* key: fit the image inside */
     background-repeat: no-repeat;
     background-position: center;
-   
-
+    background-color: #fff;
+    padding: 2rem;
   }
 }

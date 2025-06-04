@@ -13,12 +13,16 @@ import FeatureBlock from '../component/FeatureBlock';
 import HeroSection from '../component/HeroSection';
 import Footer from '../pages/Footer';
 import AppFooter from '../component/AppFooter';
+import Countdown from '../component/Countdown';
+import one from '../images/one.png'
+import two from '../images/two.png'
+import three from '../images/three.png'
 const NimbleLandingPage = () => {
 
   const slides = [
     {
-      headline: "Get your free goodie bag only on launch day",
-      subtext: "Spend $25 or more and get it today",
+      headline: "Grocery shopping, now fun & quicker",
+      subtext: "Download the Nimble app and be the among first to shop at Neighbors Market",
     },
     {
       headline: "Refer 5 & get 15% off",
@@ -52,15 +56,15 @@ const NimbleLandingPage = () => {
             {/* You can now continue with the rest of the page sections below */}
             {/* Hero Section */}
             <section
-  className="hero-section text-white"
-  style={{
-   backgroundColorw:'#fffff',
-    backgroundSize: 'cover',
-    backgroundPosition: 'left center',
-    backgroundRepeat: 'no-repeat',
-    padding: '5rem 0',
-  }}
->
+                  className="hero-section text-white"
+                  style={{
+                  backgroundColor:'#fffff',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'left center',
+                    backgroundRepeat: 'no-repeat',
+                    padding: '5rem 0',
+                  }}
+                >
 <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
   {/* Left Content: Heading, Subheading, (Desktop-only) Download Button */}
   <div className="mb-4 mb-md-0" style={{ maxWidth: '500px' }}>
@@ -119,37 +123,7 @@ const NimbleLandingPage = () => {
 </section>
 
       {/* Countdown Section */}
-      <section
-            className="py-5 text-center"
-            style={{
-              backgroundColor: '#E8F8E4',
-              backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.01) 10px, rgba(0,0,0,0.01) 20px)',
-               }}
-               >
-            <h2 className="fw-bold mb-4" style={{ fontSize: '1.8rem' }}>
-              We are launching soon! <span role="img" aria-label="rocket">🚀</span>
-            </h2>
-
-            <div className="d-flex justify-content-center gap-4">
-              {/* Day Box */}
-              <div className="px-4 py-3 rounded" style={{ backgroundColor: '#DFF3E2' }}>
-                <h3 className="fw-bold text-dark mb-0" style={{ color: '#004C45', fontSize: '2rem' }}>24</h3>
-                <small className="text-muted">Days</small>
-              </div>
-
-              {/* Hour Box */}
-              <div className="px-4 py-3 rounded" style={{ backgroundColor: '#DFF3E2' }}>
-                <h3 className="fw-bold text-dark mb-0" style={{ color: '#004C45', fontSize: '2rem' }}>18</h3>
-                <small className="text-muted">Hours</small>
-              </div>
-
-              {/* Minute Box */}
-              <div className="px-4 py-3 rounded" style={{ backgroundColor: '#DFF3E2' }}>
-                <h3 className="fw-bold text-dark mb-0" style={{ color: '#004C45', fontSize: '2rem' }}>35</h3>
-                <small className="text-muted">Minutes</small>
-              </div>
-            </div>
-      </section>
+      <Countdown />
       {/* Custom Promo Slider */}
       <div className="carousel-viewport">
         <section className={`carousel-wrapper slide-${currentSlide}`}>
@@ -165,9 +139,9 @@ const NimbleLandingPage = () => {
                       <h2>{slide.headline}</h2>
                       <p>{slide.subtext}</p>
                       <button className="download-btn">Download Now</button>
-                      <p className="terms">*T&C apply</p>
+                      {/* <p className="terms">*T&C apply</p> */}
                     </div>
-
+                   
                 </div>
 
               </div>
@@ -193,19 +167,21 @@ const NimbleLandingPage = () => {
 
 
       <section className="features-wrapper">
-              <h2 className="features-heading">Features of Nimble</h2>
+              <h2 className="features-heading">How it Works</h2>
 
               <FeatureBlock
                 icon={slide2}
                 title="Snap, pay & go"
-                text="Skip the checkout lines! Simply scan items with your phone..."
+                text="Skip the checkout lines! Simply scan items with your phone as you shop, pay through the app, and walk out. Shopping made effortless."
                 image={feature1}
+                sicon={one}
               />
               <FeatureBlock
                 icon={slide2}
                 title="Smart Suggestions"
                 text="Get personalized recommendations while you shop."
                 image={feature2}
+                sicon={two}
                 reverse
               />
               <FeatureBlock
@@ -213,6 +189,7 @@ const NimbleLandingPage = () => {
                 title="Exclusive Launch Offers"
                 text="Access special deals available only during launch week."
                 image={feature3}
+                sicon={two}
               />
             </section>
 
