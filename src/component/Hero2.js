@@ -1,9 +1,10 @@
-import React from 'react';
+import React , { useEffect, useState }from 'react';
 import './Hero2.css';
 
 const Hero2 = ({
   image,              // phone image
   image2,
+  image2Mobile, 
   firstline,          // heading text
   secondline,         // subtext
   firstLineColor,     // heading color
@@ -11,7 +12,17 @@ const Hero2 = ({
   buttontextC,
   buttonbg
 }) => {
+  const [bgImage, setBgImage] = useState(image2);
+  useEffect(() => {
+    const handleResize = () => {
+      setBgImage(window.innerWidth <= 768 ? image2Mobile : image2);
+    };
 
+    handleResize(); // Set initially
+    window.addEventListener('resize', handleResize); // Update on resize
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [image2, image2Mobile]);
 
 
   return (
@@ -20,7 +31,7 @@ const Hero2 = ({
     >
 <div
   className="hero2-container"
-  style={{ backgroundImage: `url(${image2})` }}
+  style={{ backgroundImage: `url(${bgImage})` }}
 >
 
         {/* Left Text Side */}

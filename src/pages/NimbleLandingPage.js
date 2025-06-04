@@ -24,6 +24,7 @@ import Hero2 from '../component/Hero2';
 import imageA from '../images/phone1.png';
 
 import imagebackA from '../images/bg.png';
+import image_mobilebg from '../images/m_bg.png';
 import CarouselComponent from '../component/CarouselComponent';
 
 const slidesData = [
@@ -103,6 +104,7 @@ const NimbleLandingPage = () => {
     
       <Hero2 image={image2}  
              image2={imagebackA}  
+             image2Mobile={image_mobilebg}
             buttontextC = "#064E3B"
             buttonbg = "#A4EC8A"
             firstLineColor="#fff"
