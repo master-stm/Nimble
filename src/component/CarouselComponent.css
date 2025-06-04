@@ -1,26 +1,37 @@
 .carousel-viewport {
   overflow-x: hidden;
-  padding: 0 2rem;
   position: relative;
+
+  padding: 0; /* remove horizontal padding */
 }
+
 
 .carousel-wrapper {
   position: relative;
-  padding: 4rem 0;
-  margin: 2rem 1rem;
+  padding: 4rem 1rem;
+  width: 100%;
+  margin: 0 ;
   border-radius: 1.5rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  max-width: none;
+  box-sizing: border-box;
 }
 
 .carousel-slides {
   display: flex;
+  
+
   transition: transform 0.5s ease-in-out;
+  
 }
 
 .carousel-slide {
   min-width: 100%;
+  width: 100%;  
+
   opacity: 0;
   display: none;
   transition: opacity 0.5s ease;
@@ -41,31 +52,47 @@
 .slide-content {
   display: flex;
   justify-content: center;
+  width: 100%;
   padding: 2rem;
+
+}
+.slide-image-wrapper {
+  display: flex;
+  justify-content: center;
+
+}
+.slide-content-inner {
+width: 100%;
+display: flex;
+justify-content: space-around;
+
+}
+.slide-1 .slide-image-wrapper {
+  align-items: flex-end;
+  margin-top: 16px;
+  height: 100%; /* Needed to align at bottom */
+
 }
 
-.slide-content-inner {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 2rem;
-}
 
 .slide-text-outer {
-  width: 420px;
-  height: 420px;
+  max-width: 560px;
+  width: 100%;
+  aspect-ratio: 4 / 5;
   object-fit: contain;
+  transform: scale(1.1);
+  margin-top: 0;
 }
 
 .slide-text {
+  flex: 1;
   max-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 60px;
 }
+
+
 
 .slide-text h2 {
   color: #004C45;

@@ -80,7 +80,20 @@
     display: flex;
     justify-content: center;
   }
-  
+  .main_mockup-back{
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* adjust as needed */
+    margin: 0 auto;
+    padding: 2rem;
+   
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .main-mockup {
     width: 100%;
     max-width: 320px;
@@ -130,12 +143,22 @@
   
   /* ─── MOBILE LAYOUT OVERRIDES (<768px) ─── */
 @media (max-width: 768px) {
+  .feature-section-wrapper {
+    width: 100%;            /* force full viewport width */
+    margin: 0;
+    padding: 0;
+
+  }
   /* Stack everything vertically instead of side-by-side */
   .feature-container {
-    flex-direction: column !important;
-    align-items: flex-start;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+
   }
+
 
   /* Ensure reverse mode also stacks in the same way */
   .feature-container.reverse {
@@ -143,9 +166,15 @@
   }
 
   /* Left block (icon + text) spans full width */
+
   .feature-left {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1rem;
+    box-sizing: border-box;
+
   }
+
 
   /* Keep icon-box, h3, and p left-aligned */
   .icon-box {
@@ -158,19 +187,39 @@
 
   /* Right block (image + floating icon) spans full width and center-aligns the image */
   .feature-right {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+
     margin-top: 2rem;
     justify-content: center;
-  }
 
+
+  }
+.main_mockup-back{
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* adjust as needed */
+  margin: 0 auto;
+  padding: 2rem;
+  background-image: url('../images/bg.png'); /* update path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   /* Shrink the mockup image slightly on mobile */
   .main-mockup {
-    max-width: 260px;
+    width: 100%;
+    max-width: 1232px;
     height: auto;
     display: block;
-    margin: 0 auto;
 
+    margin: 0 auto;
+    object-fit: contain;
   }
+  
 
   /* Adjust floating icon position: center it above the image */
   .floating-icon {

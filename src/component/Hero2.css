@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .hero2 {
   background-size: cover;
   width: 100%;

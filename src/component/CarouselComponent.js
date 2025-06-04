@@ -20,7 +20,10 @@ const CarouselComponent = ({
             >
               <div className="slide-content">
                 <div className="slide-content-inner">
-                  <img src={slide.image} className="slide-text-outer" alt="Hero" />
+                <div className={`slide-image-wrapper slide-${index}`}>
+  <img src={slide.image} className="slide-text-outer" alt="Hero" />
+</div>
+
                   <div className="slide-text">
                     <h2>{slide.headline}</h2>
                     <p>{slide.subtext}</p>

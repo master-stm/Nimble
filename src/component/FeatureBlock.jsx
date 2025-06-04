@@ -22,7 +22,9 @@ const FeatureBlock = ({ sicon, title, text, image, reverse }) => {
               
             </div>
           )}
+          <div className='main_mockup-back'>
           <img src={image} alt="Feature Visual" className="main-mockup" />
+        </div>
         </div>
 
       </div>
