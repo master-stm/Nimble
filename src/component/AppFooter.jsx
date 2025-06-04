@@ -4,10 +4,11 @@ import StoreButton from './StoreButton';
 import appStoreBadge from '../images/apple.png';
 import playStoreBadge from '../images/playstore.png';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
-
+//  border: 5px solid black;
 const AppFooter = () => {
   return (
-    <footer className="app-footer">
+  <footer className="app-footer">
+    <div className='app-footer-inside'>
       {/* Column 1: Shop links */}
       <div className="footer-col footer-links">
         <a href="/shop-fast">Shop Fast</a>
@@ -16,12 +17,12 @@ const AppFooter = () => {
       </div>
 
       {/* Column 2: Store badges */}
-      <div className="footer-col footer-download-outer">
+      <div className="footer-download-outer">
       <p style={{ color: 'black' ,
                   fontWeight: 600 
                   
                   }}>Get the app</p>
-
+  <div className='footer-download-outer'>
       <div className="footer-col footer-download">
    
    
@@ -39,11 +40,13 @@ const AppFooter = () => {
   line2="App store"
   link="https://apps.apple.com"
 />
-
+</div>
       </div>
       </div>
       {/* Column 3: Text links + email */}
-      <div className="footer-col footer-contact">
+    <div className='footer-contact-outer'>
+    <div className='footer-contact-outer2'>
+    <div className="footer-col footer-contact">
   <p className="footer-contact-heading">Contact us</p>
   <p className="footer-contact-text">
     Need help with the app? Reach out<br />
@@ -53,6 +56,9 @@ const AppFooter = () => {
     sales@getnimbleapp.com
   </a>
 </div>
+
+      </div>
+    </div>
 
 
       {/* Column 4: Social icons */}
@@ -70,6 +76,7 @@ const AppFooter = () => {
 
               </ul>
               </div>
+      </div>
     </footer>
   );
 };

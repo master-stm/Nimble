@@ -6,9 +6,9 @@
   background-position: center;
   border-radius: 1.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  width: 100%;
-  min-height: 400px;
+
+
+
 }
 .carousel-viewport {
   overflow-x: hidden;
@@ -25,13 +25,13 @@
   border-radius: 1.5rem; 
 }
 .carousel-slide.slide-0 {
-  background-image: url('../images/banner.png');
+  background-image: url('../images/banner101.png');
 }
 .carousel-slide.slide-1 {
-  background-image: url('../images/banner2.png');
+  background-image: url('../images/banner102.png');
 }
 .carousel-slide.slide-2 {
-  background-image: url('../images/banner3.png');
+  background-image: url('../images/banner103.png');
 }
 .carousel-slides {
   display: flex;
@@ -45,6 +45,10 @@
   opacity: 0;
   transition: opacity 0.5s ease;
   display: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%; 
 }
 .carousel-slide.active {
   opacity: 1;
@@ -52,9 +56,10 @@
 }
 .slide-content {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 200px;
-  padding: 2rem 1rem;
+  justify-content: space-evenly;
+  min-height: 520px;
+
+
 }
 .slide-container {
   display: flex;
@@ -76,6 +81,9 @@
 }
 .slide-text {
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
 
 }
 .slide-text h2 {
@@ -121,6 +129,18 @@
 }
 .carousel-btn.next {
   right: 0;
+}
+.slide-text-outer{
+  width:420px;
+  height: 420px;
+  margin-top: 30px;
+
+
+}
+.side-text-outer-1{
+  display: flex;
+  justify-content: center;
+border: 5px solid black;
 }
 /* Dots */
 .carousel-dots {
@@ -208,13 +228,13 @@
     margin-top: 0.5rem;
   }
   .carousel-slide.slide-0 {
-    background-image: url('../images/banner_mobile.png');
+    background-image: url('../images/banner101.png');
   }
   .carousel-slide.slide-1 {
-    background-image: url('../images/banner_mobile.png');
+    background-image: url('../images/banner102.png');
   }
   .carousel-slide.slide-2 {
-    background-image: url('../images/banner_mobile.png');
+    background-image: url('../images/banner103.png');
   }
   .slide-img {
     width: 100%;

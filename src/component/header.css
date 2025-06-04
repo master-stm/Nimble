@@ -1,3 +1,4 @@
+/* Font */
 header,
 header a,
 header button,
@@ -7,59 +8,130 @@ header button,
 .nav-link {
   font-family: 'Lato', sans-serif;
 }
-/* Dark teal background */
-.bg-teal-900 {
-    background-color: #064E3B !important;
+
+/* Background */
+.header {
+  background-color: #064E3B;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Layout */
+.navbar {
+  padding: 0.5rem;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+
+}
+
+/* Left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+
+}
+
+.navbar-links-desktop {
+  display: flex;
+  margin-left: 1rem;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+/* Download Button */
+.header-download-btn {
+  background-color: #BBF7D0;
+  color: #064E3B;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.header-download-btn:hover {
+  background-color: #A4EC8A;
+  color: #064E3B;
+}
+
+/* Toggler */
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Collapsed Menu */
+.navbar-collapse {
+  background-color: #064E3B;
+}
+
+.navbar-nav-mobile {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.navbar-nav-mobile li {
+  margin: 0.5rem 0;
+}
+
+.navbar-nav-mobile .nav-link {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Media Queries */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
   }
 
-  /* Download button styling */
+  .navbar-collapse {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-links-desktop {
+    display: none;
+  }
+
   .header-download-btn {
-    background-color: #BBF7D0;
-    color: #064E3B;
-    border: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
-  .header-download-btn:hover {
-    background-color: #A4EC8A;
-    color: #064E3B;
+
+  .navbar-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
-  
-  /* Always keep container as one row, no wrapping */
-  .navbar .container-fluid {
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /* ─── Desktop (≥992px) ─── */
-  @media (min-width: 992px) {
-    /* Hide the hamburger on desktop */
-    .navbar-toggler {
-      display: none;
-    }
-  }
-  
-  /* ─── Mobile/Tablet (<992px) ─── */
-  @media (max-width: 991px) {
-    /* Hide the inline Features/Offers links */
-    .d-lg-flex {
-      display: none !important;
-    }
-  
-    /* Reduce side padding so Download + ☰ hug the right edge */
-    .navbar .container-fluid {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-    }
-  
-    /* Slightly shrink the Download button */
-    .header-download-btn {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.8rem;
-    }
-  }
-  
+}

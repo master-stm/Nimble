@@ -1,0 +1,188 @@
+.carousel-viewport {
+  overflow-x: hidden;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.carousel-wrapper {
+  position: relative;
+  padding: 4rem 0;
+  margin: 2rem 1rem;
+  border-radius: 1.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  display: block;
+}
+
+.slide-content {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.slide-content-inner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+}
+
+.slide-text-outer {
+  width: 420px;
+  height: 420px;
+  object-fit: contain;
+}
+
+.slide-text {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 60px;
+}
+
+.slide-text h2 {
+  color: #004C45;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.slide-text p {
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+.download-btn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #074F51;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #064E3B;
+  cursor: pointer;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 40px;
+  height: 6px;
+  margin: 0 6px;
+  background-color: #E8F8E4;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #004C45;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .slide-content {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .slide-content-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide-text-outer {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 1rem auto;
+  }
+
+  .slide-text {
+    margin: 1.5rem 0 0;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .slide-text h2 {
+    font-size: 2rem;
+  }
+
+  .download-btn {
+    background-color: #A4EC8A;
+    color: #074F51;
+  }
+
+  .carousel-wrapper {
+    padding: 2rem 0;
+    margin: 1rem 0;
+  }
+
+  .carousel-btn {
+    display: none !important;
+  }
+
+  .carousel-slide {
+    width: 90vw;
+    max-width: 343px;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 2rem;
+  }
+
+  .carousel-dots {
+    margin-top: 0.5rem;
+  }
+}

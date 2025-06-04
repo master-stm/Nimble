@@ -1,171 +1,77 @@
-import React, { useState, useEffect,useCallback } from 'react';
+import React, {useState,useEffect} from 'react';
 import logo_img from '../images/logo_white.png';
 import Header from '../component/Header'
-import phone0 from '../images/phone1.png';
+
 import slide2 from '../images/logo.svg'; 
 import feature1 from '../images/feature1.png'; 
 import image2 from '../images/women.png'; 
+
 import feature2 from '../images/feature2.png'; 
-import back_frame from '../images/bg.png'; 
+
 import feature3 from '../images/feature3.png'; 
 import '../styles/NLP_Islider.css'
 import FeatureBlock from '../component/FeatureBlock';
-import HeroSection from '../component/HeroSection';
+
 import Footer from '../pages/Footer';
 import AppFooter from '../component/AppFooter';
 import Countdown from '../component/Countdown';
 import one from '../images/one.png'
 import two from '../images/two.png'
-import imageback from '../images/m_banner.png'
+import totebag from '../images/tote_bag.png'; 
+import two_g from '../images/two_g.png';
+import three_g from '../images/three_g.png';
+import Hero2 from '../component/Hero2';
+import imageA from '../images/phone1.png';
 
+import imagebackA from '../images/bg.png';
+import CarouselComponent from '../component/CarouselComponent';
+
+const slidesData = [
+  { headline: 'Get your free goodie bag only on launch day', subtext: 'Spend $25 or more and get it today' , image: totebag},
+  { headline: 'Refer 5 & get 15% off!', subtext: 'Offer valid on purchases over $25 on June 14th', image: two_g },
+  { headline: 'Students, stock up!', subtext: 'Get upto 20% off groceries for next 3 months', image: three_g }
+];
 const NimbleLandingPage = () => {
 
-  const slides = [
-    {
-      headline: "Grocery shopping, now fun & quicker",
-      subtext: "Download the Nimble app and be the among first to shop at Neighbors Market",
-    },
-    {
-      headline: "Refer 5 & get 15% off",
-      subtext: "offer valid on purchase over $25 on June 14th.",
-    },
-    {
-      headline: "Students, stock up!",
-      subtext: "get upto 20% off groceries for next 3 months.",
-    }
-  ];
-  
+ 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  }, [slides.length]);
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slidesData.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slidesData.length) % slidesData.length);
   useEffect(() => {
-    const interval = setInterval(nextSlide, 4000); // auto-slide every 4 sec
-    return () => clearInterval(interval);
-  }, [nextSlide]);
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000); // 4000ms = 4 seconds
+
+    return () => clearInterval(interval); // cleanup
+  }, []);
   
   return (
     <div className="font-sans">
             {/* Navigation Bar */}
               <Header image={logo_img} />
-
+          
             {/* You can now continue with the rest of the page sections below */}
             {/* Hero Section */}
-            <section
-                  className="hero-section text-white"
-                  style={{
-                  backgroundColor:'#fffff',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'left center',
-                    backgroundRepeat: 'no-repeat',
-                    padding: '5rem 0',
-                  }}
-                >
-<div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-  {/* Left Content: Heading, Subheading, (Desktop-only) Download Button */}
-  <div className="mb-4 mb-md-0" style={{ maxWidth: '500px' }}>
-    <h1
-      className="fw-bold mb-3"
-      style={{ fontSize: '2.5rem', color: '#004C45' }}
-    >
-      Grocery shopping,<br />now fun & quicker
-    </h1>
-    <p className="text-muted mb-4">
-      Download the Nimble app and be among the first to shop at Neighbors Market
-    </p>
-    {/* Desktop-only Download Button (hidden on mobile <md) */}
-    <a
-      href="/"
-      className="btn px-4 py-3 rounded-pill d-none d-md-inline-block"
-      style={{
-        backgroundColor: '#004C45',
-        color: '#fff',
-        fontWeight: 600,
-        fontSize: '1.1rem',
-
-      }}
-    >
-      Download Now
-    </a>
-  </div>
-        {/* Mobile-only Download Button (visible <md) */}
-  <div className="d-block d-md-none text-center">
-    <a
-      href="/"
-      className="btn px-4 py-3 rounded-pill"
-      style={{
-        backgroundColor: '#004C45',
-        color: '#fff',
-        fontWeight: 600,
-        fontSize: '1.1rem',
-      }}
-    >
-      Download Now
-    </a>
-  </div>
-  {/* Middle: Image */}
-  <div className="mb-4 mb-md-0 text-center text-md-start">
-    <img
-      className="image_banner-1"
-      src={phone0}
-      alt="phone"
-      style={{ maxWidth: '100%', height: 'auto' }}
-    />
-  </div>
-
-  
-</div>
-
-</section>
+            <Hero2 image={imageA}  
+              buttontextC = "#FFFFF"
+            buttonbg = "#074F51"
+            firstLineColor="#074F51"
+            secondLineColor ="#7A7A7A"   
+             
+             firstline ="Grocery shopping, now fun & quicker" 
+             secondline="Download the Nimble app and be among the first to shop at Neighbors Market" />
 
       {/* Countdown Section */}
       <Countdown />
       {/* Custom Promo Slider */}
-      <div className="carousel-viewport">
-        <section className={`carousel-wrapper slide-${currentSlide}`}>
-          <div className="carousel-slides">
-            {slides.map((slide, index) => (
-              <div
-                key={index}
-                className={`carousel-slide slide-${index} ${index === currentSlide ? 'active' : ''}`}
-              >
-                <div className="slide-content">
-
-                    <div className="slide-text">
-                      <h2>{slide.headline}</h2>
-                      <p>{slide.subtext}</p>
-                      <button className="download-btn">Download Now</button>
-                      {/* <p className="terms">*T&C apply</p> */}
-                    </div>
-                   
-                </div>
-
-              </div>
-            ))}
-          </div>
-
-          {/* Navigation */}
-          <button onClick={prevSlide} className="carousel-btn prev">&#10094;</button>
-          <button onClick={nextSlide} className="carousel-btn next">&#10095;</button>
-
-          {/* Dots */}
-          <div className="carousel-dots">
-            {slides.map((_, index) => (
-              <span
-                key={index}
-                className={`dot ${index === currentSlide ? 'active' : ''}`}
-                onClick={() => setCurrentSlide(index)}
-              />
-            ))}
-          </div>
-        </section>
-        </div>
-
+       <CarouselComponent
+        slides={slidesData}
+        currentSlide={currentSlide}
+        setCurrentSlide={setCurrentSlide}
+        nextSlide={nextSlide}
+        prevSlide={prevSlide}
+      />
 
       <section className="features-wrapper">
               <h2 className="features-heading">How it Works</h2>
@@ -195,7 +101,14 @@ const NimbleLandingPage = () => {
             </section>
 
     
-      <HeroSection image={image2}  image2={back_frame}  image2Mobile={imageback} colors={["#fffff", "#fffff"]}firstline ="Ready to try Nimble?" secondline="Download now and get a free goodie bag at Neighbors Market on June 14th!" />
+      <Hero2 image={image2}  
+             image2={imagebackA}  
+            buttontextC = "#064E3B"
+            buttonbg = "#A4EC8A"
+            firstLineColor="#fff"
+            secondLineColor ="#fff"  
+             firstline ="Ready to try Nimble?" 
+             secondline="Download now and get a free goodie bag at Neighbors Market on June 14th!" />
 <AppFooter />
       <Footer bgColor="#A4EC8A" textColor="#064E3B" />
 
