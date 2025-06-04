@@ -18,6 +18,11 @@ export default function Footer({ bgColor = "#fff", textColor = "#064E3B" }) {
           <li><a href="/" ><FaTwitter /></a></li>
           <li><a href="/"><FaLinkedinIn /></a></li>
         </ul>
+        <ul className="footer-legal">
+          <li><a href="/PrivacyPolicies">Privacy</a></li>
+          <li><a href="/Terms">Terms</a></li>
+        </ul>
+
       </div>
     </footer>
   );
