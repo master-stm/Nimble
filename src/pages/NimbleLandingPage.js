@@ -16,6 +16,7 @@ import AppFooter from '../component/AppFooter';
 import Countdown from '../component/Countdown';
 import one from '../images/one.png'
 import two from '../images/two.png'
+import imageback from '../images/m_banner.png'
 
 const NimbleLandingPage = () => {
 
@@ -194,7 +195,7 @@ const NimbleLandingPage = () => {
             </section>
 
     
-      <HeroSection image={image2} colors={["#fffff", "#fffff"]} image2={back_frame} firstline ="Ready to try Nimble?" secondline="Download now and get a free goodie bag at Neighbors Market on June 14th!" />
+      <HeroSection image={image2}  image2={back_frame}  image2Mobile={imageback} colors={["#fffff", "#fffff"]}firstline ="Ready to try Nimble?" secondline="Download now and get a free goodie bag at Neighbors Market on June 14th!" />
 <AppFooter />
       <Footer bgColor="#A4EC8A" textColor="#064E3B" />
 

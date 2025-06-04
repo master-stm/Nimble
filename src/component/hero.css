@@ -18,3 +18,34 @@
     max-width: 100%;
     height: auto;
   }
+  /* hero.css */
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  min-height: 454px;
+  background-repeat: no-repeat;
+  padding: 3rem 1.5rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.hero-image-placeholder {
+  height: 330px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    background-image: var(--mobile-hero-background);
+    padding: 2rem 1rem;
+    min-height: 400px;
+  }
+
+  .hero-image-placeholder {
+    background-color: transparent;
+  }
+
+  .hero-image {
+    display: none !important;
+  }
+}
+

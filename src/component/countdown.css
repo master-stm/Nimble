@@ -15,4 +15,32 @@
       opacity: 0.9;
     }
   }
+  .countdown-wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .countdown-wrapper {
+      padding: 0 1rem;
+      gap: 0.75rem;
+    }
+  
+    .countdown-box {
+      flex: 1 1 40%;
+      min-width: 80px;
+      padding: 0.5rem 0.75rem !important;
+    }
+  
+    .ticker-number,
+    .ticker-number-animate {
+      font-size: 1.5rem !important;
+    }
+  
+    .countdown-box small {
+      font-size: 0.8rem;
+    }
+  }
   

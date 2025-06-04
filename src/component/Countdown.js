@@ -41,7 +41,8 @@ const Countdown = () => {
         Launching soon! <span role="img" aria-label="rocket">🚀</span>
       </h2>
 
-      <div className="d-flex justify-content-center gap-4">
+      <div className="countdown-wrapper d-flex justify-content-center gap-3 flex-wrap">
+
         {/* Day Box */}
             <div className="px-4 py-3 rounded countdown-box" style={{ backgroundColor: '#E2F5DB' }}>
             <h3 className="fw-bold mb-0 ticker-number" style={{ color: '#074F51', fontSize: '2rem' }} key={timeLeft.days}>
