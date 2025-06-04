@@ -28,10 +28,10 @@ const Hero2 = ({
   return (
     <section
       className="hero2"
-    >
+      style={{ backgroundImage: `url(${bgImage})` }}>
 <div
   className="hero2-container"
-  style={{ backgroundImage: `url(${bgImage})` }}
+ 
 >
 
         {/* Left Text Side */}

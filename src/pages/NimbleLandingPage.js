@@ -55,7 +55,7 @@ const NimbleLandingPage = () => {
             {/* You can now continue with the rest of the page sections below */}
             {/* Hero Section */}
             <Hero2 image={imageA}  
-              buttontextC = "#FFFFF"
+            buttontextC = "#fff"
             buttonbg = "#074F51"
             firstLineColor="#074F51"
             secondLineColor ="#7A7A7A"   

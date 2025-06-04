@@ -57,24 +57,33 @@
 
 /* Responsive layout for mobile */
 @media (max-width: 768px) {
+  
+  .hero2 {
+    width: 100vw;               /* full screen width */
+    height: 100vh;              /* full screen height */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
   .hero2-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    
-    padding: 0 1rem;
+    justify-content: space-between;
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    border:5px solid blue;
+
+
   }
 
   .hero2-text-wrapper {
     align-items: start;
     text-align: start;
+    margin-top: 60px;
     max-width: 100%;
-    border:5px solid black;
+
   }
 
   .hero2-heading {
@@ -88,20 +97,23 @@
   .hero2-btn {
     width: 100%;
     max-width: 200px;
-    border:5px solid black;
+    
   }
 
   .hero2-image-wrapper {
-    border: 5px solid black;
-    width: 100%;
-    display: flex;              
-    justify-content: center;   
-    align-items: flex-end;      
-    min-height: 220px;         
+
+  width: 452px;
+  height: 452px;
+  display: flex;
+  justify-content: center;    
+  align-items: flex-end;      
+  overflow: hidden;
   }
   
 
   .hero2-image {
-    max-width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 0;                  /* remove any margin */
   }
 }
