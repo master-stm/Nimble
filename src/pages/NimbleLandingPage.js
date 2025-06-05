@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import logo_img from '../images/logo_white.png';
 import Header from '../component/Header'
 
