@@ -78,7 +78,7 @@
   @media (max-width: 768px) {
     .hero2 {
       width: 100vw;       /* fill full viewport width */
-      height: 100vh;      /* fill full viewport height on mobile */
+      height: auto;      /* fill full viewport height on mobile */
       margin: 0;
       padding: 0;
   
@@ -89,7 +89,7 @@
   
       /* We do NOT set background-image here; React’s inline style will do that. */
       background-size: cover;       /* scale so the entire width is covered */
-      background-position: right center; 
+      background-position: 85% 50%;
         /* “push” the big mint curve all the way to the right, centered vertically */
       background-repeat: no-repeat;
     }
