@@ -87,16 +87,16 @@ const NimbleLandingPage = () => {
               />
               <FeatureBlock
                 icon={slide2}
-                title="Smart Suggestions"
-                text="Get personalized recommendations while you shop."
+                title="Order & pickup"
+                text="Shop online, we'll prepare your order. Drive up to our convenient pickup spots and we'll load your groceries straight into your car."
                 image={feature2}
                 sicon={two}
                 reverse
               />
               <FeatureBlock
                 icon={slide2}
-                title="Exclusive Launch Offers"
-                text="Access special deals available only during launch week."
+                title="Recipe based shopping"
+                text="Discover new meals and add all ingredients to your cart with one tap. Turn dinner inspiration into a complete shopping list instantly."
                 image={feature3}
                 sicon={three}
               />

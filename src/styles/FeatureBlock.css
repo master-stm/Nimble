@@ -153,7 +153,8 @@
   .feature-container {
     display: flex;
     flex-direction: column;
-
+ 
+   
     box-sizing: border-box;
 
 
@@ -173,6 +174,7 @@
     padding: 1rem;
     box-sizing: border-box;
 
+
   }
 
 
@@ -190,33 +192,18 @@
     width: 100% !important;
     max-width: 100% !important;
 
-    margin-top: 2rem;
+
     justify-content: center;
 
 
   }
-.main_mockup-back{
-  position: relative;
-  width: 100%;
-  max-width: 400px; /* adjust as needed */
-  margin: 0 auto;
-  padding: 2rem;
-  background-image: url('../images/bg.png'); /* update path */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
   /* Shrink the mockup image slightly on mobile */
   .main-mockup {
-    width: 100%;
-    max-width: 1232px;
-    height: auto;
-    display: block;
-
-    margin: 0 auto;
+    width: 100vw; /* Full width of viewport */
+    max-width: none; /* Remove limitation */
+    margin: 0; /* Remove centering */
+    padding: 0;
     object-fit: contain;
   }
   
