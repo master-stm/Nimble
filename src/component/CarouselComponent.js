@@ -1,7 +1,7 @@
 import React from 'react';
 import './CarouselComponent.css';
-import greencurve from '../images/vector.png';
 
+ 
 const CarouselComponent = ({
   slides = [],
   currentSlide = 0,
@@ -18,17 +18,17 @@ const CarouselComponent = ({
               key={index}
               className={`carousel-slide slide-${index} ${index === currentSlide ? 'active' : ''}`}
             >
-              {index === 2 && (
+
+              <div className="slide-content">
+              {(
                 <img
-                  src={greencurve}
+                  src={slide.vector1}
                   alt="Background Curve"
-                  className="background-curve"
+                  className={`background-curve background-curve-${index}`}
                 />
               )}
 
-              <div className="slide-content">
-                <div className="slide-content-inner">
-                  <div className={`slide-image-wrapper slide-${index}`}>
+<div className={`slide-image-wrapper slide-image-wrapper-${index}`}>
                     <img src={slide.image} className="slide-text-outer" alt="Hero" />
                   </div>
 
@@ -37,7 +37,7 @@ const CarouselComponent = ({
                     <p>{slide.subtext}</p>
                     <button className="download-btn">Download Now</button>
                   </div>
-                </div>
+                
               </div>
             </div>
           ))}

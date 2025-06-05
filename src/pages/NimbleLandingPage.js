@@ -27,11 +27,29 @@ import imageA from '../images/phone1.png';
 import imagebackA from '../images/bg.png';
 import image_mobilebg from '../images/m_bg.png';
 import CarouselComponent from '../component/CarouselComponent';
+import one1 from "../images/vector2.png";
+import two2 from "../images/vector1.png";
+import three3 from "../images/vector.png";
 
 const slidesData = [
-  { headline: 'Get your free goodie bag only on launch day', subtext: 'Spend $25 or more and get it today' , image: totebag},
-  { headline: 'Refer 5 & get 15% off!', subtext: 'Offer valid on purchases over $25 on June 14th', image: two_g },
-  { headline: 'Students, stock up!', subtext: 'Get upto 20% off groceries for next 3 months', image: three_g }
+  {
+    headline: "Get your free goodie bag only on launch day",
+    subtext: "Spend $25 or more and get it today",
+    image: totebag,
+    vector1: one1,
+  },
+  {
+    headline: "Refer 5 & get 15% off!",
+    subtext: "Offer valid on purchases over $25 on June 14th",
+    image: two_g,
+    vector1: two2,
+  },
+  {
+    headline: "Students, stock up!",
+    subtext: "Get upto 20% off groceries for next 3 months",
+    image: three_g,
+    vector1: three3,
+  },
 ];
 const NimbleLandingPage = () => {
 
@@ -40,13 +58,13 @@ const NimbleLandingPage = () => {
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slidesData.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slidesData.length) % slidesData.length);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4000); // 4000ms = 4 seconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextSlide();
+  //   }, 4000); // 4000ms = 4 seconds
 
-    return () => clearInterval(interval); // cleanup
-  }, []);
+  //   return () => clearInterval(interval); // cleanup
+  // }, []);
   
   return (
     <div className="font-sans">
