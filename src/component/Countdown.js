@@ -32,7 +32,6 @@ const Countdown = () => {
       className="py-5 text-center"
       style={{
         backgroundColor: "#E8F8E4",
-        height: "40vh",
         backgroundImage:
           "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.01) 10px, rgba(0,0,0,0.01) 20px)",
         fontFamily: "Lato, sans-serif",
