@@ -78,7 +78,7 @@
   @media (max-width: 768px) {
     .hero2 {
       width: 100vw;       /* fill full viewport width */
-      height: 100vw;      /* fill full viewport height on mobile */
+      height: 150vw;      /* fill full viewport height on mobile */
       margin: 0;
       padding: 0;
   
@@ -92,6 +92,7 @@
       background-position: 85% 50%;
         /* “push” the big mint curve all the way to the right, centered vertically */
       background-repeat: no-repeat;
+
     }
   
     .hero2-text-wrapper {
@@ -128,7 +129,7 @@
       align-items: center;      /* center image vertically */
       
       overflow: hidden;         
-  
+
      
       
       /* Flex: let this wrapper take up all leftover space */
