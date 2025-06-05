@@ -78,7 +78,7 @@
   @media (max-width: 768px) {
     .hero2 {
       width: 100vw;       /* fill full viewport width */
-      height: auto;      /* fill full viewport height on mobile */
+      height: 100vw;      /* fill full viewport height on mobile */
       margin: 0;
       padding: 0;
   
