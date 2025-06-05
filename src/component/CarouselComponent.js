@@ -20,6 +20,7 @@ const CarouselComponent = ({
             >
 
               <div className="slide-content">
+                <div className="left-side">
               {(
                 <img
                   src={slide.vector1}
@@ -31,8 +32,8 @@ const CarouselComponent = ({
 <div className={`slide-image-wrapper slide-image-wrapper-${index}`}>
                     <img src={slide.image} className="slide-text-outer" alt="Hero" />
                   </div>
-
-                  <div className="slide-text">
+</div>
+                  <div className={`slide-text slide-text-${index}`}>
                     <h2>{slide.headline}</h2>
                     <p>{slide.subtext}</p>
                     <button className="download-btn">Download Now</button>
