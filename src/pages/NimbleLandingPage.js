@@ -30,25 +30,35 @@ import CarouselComponent from '../component/CarouselComponent';
 import one1 from "../images/vector2.png";
 import two2 from "../images/vector1.png";
 import three3 from "../images/vector.png";
+import totebag_mobile from "../images/totebag_mobile.png";
+import m_vector1 from "../images/m_vector.png";
+import m_vector2 from "../images/m_vector.png";
+import m_vector3 from "../images/m_vector.png";
 
 const slidesData = [
   {
     headline: "Get your free goodie bag only on launch day",
     subtext: "Spend $25 or more and get it today",
-    image: totebag,
+    imageDesktop: totebag,
     vector1: one1,
+    m_vector:m_vector1,
+    imageMobile:totebag_mobile
   },
   {
     headline: "Refer 5 & get 15% off!",
     subtext: "Offer valid on purchases over $25 on June 14th",
-    image: two_g,
+    imageDesktop: two_g,
     vector1: two2,
+    m_vector:m_vector2,
+    imageMobile:totebag_mobile
   },
   {
     headline: "Students, stock up!",
     subtext: "Get upto 20% off groceries for next 3 months",
-    image: three_g,
+    imageDesktop: three_g,
     vector1: three3,
+    m_vector:m_vector3,
+    imageMobile:totebag_mobile
   },
 ];
 const NimbleLandingPage = () => {

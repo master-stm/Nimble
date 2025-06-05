@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import './CarouselComponent.css';
 
  
@@ -9,6 +9,15 @@ const CarouselComponent = ({
   nextSlide = () => {},
   prevSlide = () => {},
 }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize(); // set initial
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div className="carousel-viewport">
       <section className={`carousel-wrapper slide-${currentSlide}`}>
@@ -23,14 +32,18 @@ const CarouselComponent = ({
                 <div className="left-side">
               {(
                 <img
-                  src={slide.vector1}
+                src={isMobile ? slide.m_vector : slide.vector1}
                   alt="Background Curve"
                   className={`background-curve background-curve-${index}`}
                 />
               )}
 
 <div className={`slide-image-wrapper slide-image-wrapper-${index}`}>
-                    <img src={slide.image} className="slide-text-outer" alt="Hero" />
+<img
+                      src={isMobile ? slide.imageMobile : slide.imageDesktop}
+                      alt="Hero"
+                      className="slide-text-outer"
+                    />
                   </div>
 </div>
                   <div className={`slide-text slide-text-${index}`}>
