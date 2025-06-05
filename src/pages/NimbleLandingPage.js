@@ -17,6 +17,7 @@ import AppFooter from '../component/AppFooter';
 import Countdown from '../component/Countdown';
 import one from '../images/one.png'
 import two from '../images/two.png'
+import three from '../images/three.png'
 import totebag from '../images/tote_bag.png'; 
 import two_g from '../images/two_g.png';
 import three_g from '../images/three_g.png';
@@ -97,7 +98,7 @@ const NimbleLandingPage = () => {
                 title="Exclusive Launch Offers"
                 text="Access special deals available only during launch week."
                 image={feature3}
-                sicon={two}
+                sicon={three}
               />
             </section>
 

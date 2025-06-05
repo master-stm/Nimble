@@ -13,8 +13,8 @@ const Header = ({ image }) => {
               <img src={image} alt="Nimble Logo" height="30" />
             </a>
             <div className="navbar-links-desktop">
-              <a className="nav-link" href="#features">Features</a>
-              <a className="nav-link" href="#offers">Offers</a>
+              <a className="nav-link" href="#hiw">How it Works</a>
+              <a className="nav-link" href="#cu">Contact Us</a>
             </div>
           </div>
 
@@ -42,8 +42,8 @@ const Header = ({ image }) => {
         {/* Mobile Collapsed Nav */}
         <div className="navbar-collapse collapse" id="mobileNavLinks">
           <ul className="navbar-nav-mobile">
-            <li><a className="nav-link" href="#features">Features</a></li>
-            <li><a className="nav-link" href="#offers">Offers</a></li>
+            <li><a className="nav-link" href="#hiw">How it Works</a></li>
+            <li><a className="nav-link" href="#cu">Contact Us</a></li>
           </ul>
         </div>
       </nav>

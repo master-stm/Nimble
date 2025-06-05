@@ -23,14 +23,17 @@
 .carousel-slides {
   display: flex;
   
-
+ 
   transition: transform 0.5s ease-in-out;
   
 }
 
 .carousel-slide {
+
   min-width: 100%;
-  width: 100%;  
+  width: 100%;
+  height: 500px; 
+  position: relative;
 
   opacity: 0;
   display: none;
@@ -41,8 +44,8 @@
   background-position: center;
   border-radius: 1.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  height: 100%;
 }
+
 
 .carousel-slide.active {
   opacity: 1;
@@ -54,27 +57,47 @@
   justify-content: center;
   width: 100%;
   padding: 2rem;
+  height: 100%;
 
 }
 .slide-image-wrapper {
   display: flex;
   justify-content: center;
-
+  position: relative;
+  height: 100%;
+  z-index: 0; 
 }
 .slide-content-inner {
 width: 100%;
 display: flex;
 justify-content: space-around;
-
+height: 100%; 
 }
 .slide-1 .slide-image-wrapper {
-  align-items: flex-end;
-  margin-top: 16px;
-  height: 100%; /* Needed to align at bottom */
-
+  align-items: stretch;
+  height: 100%;
 }
 
+.slide-1 .slide-text-outer {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0;
 
+  
+}
+
+.slide-2 .slide-image-wrapper {
+  align-items: flex-end;
+  margin-top: 16px;
+  height: 100%; 
+  margin-left: -100px;
+}
+.slide-2 .slide-text-outer {
+  position: relative;
+  z-index: 1;
+}
 .slide-text-outer {
   max-width: 560px;
   width: 100%;
@@ -82,6 +105,9 @@ justify-content: space-around;
   object-fit: contain;
   transform: scale(1.1);
   margin-top: 0;
+  position: relative;
+
+  z-index: 0;
 }
 
 .slide-text {
@@ -152,6 +178,15 @@ justify-content: space-around;
   cursor: pointer;
   transition: background-color 0.3s;
 }
+.background-curve {
+  display: flex;
+height: 100%;
+width: auto;
+position: absolute;
+
+z-index: 1;
+  pointer-events: none;
+}
 
 .dot.active {
   background-color: #004C45;
@@ -211,5 +246,15 @@ justify-content: space-around;
 
   .carousel-dots {
     margin-top: 0.5rem;
+  }
+  .slide-1 .slide-text-outer {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .slide-1 .slide-image-wrapper {
+    height: auto;
+    align-items: center;
   }
 }

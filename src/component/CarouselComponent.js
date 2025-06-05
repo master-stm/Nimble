@@ -1,6 +1,6 @@
-// CarouselComponent.js
 import React from 'react';
 import './CarouselComponent.css';
+import greencurve from '../images/vector.png';
 
 const CarouselComponent = ({
   slides = [],
@@ -18,11 +18,19 @@ const CarouselComponent = ({
               key={index}
               className={`carousel-slide slide-${index} ${index === currentSlide ? 'active' : ''}`}
             >
+              {index === 2 && (
+                <img
+                  src={greencurve}
+                  alt="Background Curve"
+                  className="background-curve"
+                />
+              )}
+
               <div className="slide-content">
                 <div className="slide-content-inner">
-                <div className={`slide-image-wrapper slide-${index}`}>
-  <img src={slide.image} className="slide-text-outer" alt="Hero" />
-</div>
+                  <div className={`slide-image-wrapper slide-${index}`}>
+                    <img src={slide.image} className="slide-text-outer" alt="Hero" />
+                  </div>
 
                   <div className="slide-text">
                     <h2>{slide.headline}</h2>
