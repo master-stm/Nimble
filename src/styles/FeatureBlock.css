@@ -95,8 +95,8 @@
     align-items: center;
   }
   .main-mockup {
-    width: 100%;
-    max-width: 350px;
+    max-width: 70%;
+
   }
   .floating-icon {
     position: absolute;
@@ -118,12 +118,18 @@
     padding: 4rem 2rem;
     background-color: #fff;
   }
-  .feature-left, .feature-right {
+.feature-right {
     flex: 1 1 0;
     min-width: 0;
     max-width: 50%;
+  
     
-    
+  }
+  .feature-left{
+    flex: 0.5 1 0;
+
+
+    width: 1px;
   }
   .feature-right {
 

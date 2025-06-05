@@ -1,61 +1,66 @@
-import React , { useEffect, useState }from 'react';
+import React, { useEffect, useState } from 'react';
 import './Hero2.css';
 
 const Hero2 = ({
-  image,              // phone image
-  image2,
-  image2Mobile, 
-  firstline,          // heading text
-  secondline,         // subtext
-  firstLineColor,     // heading color
-  secondLineColor,     // subtext color
+  image,        // phone mockup
+  image2,       // (no longer used for .hero2 on desktop)
+  image2Mobile, // mobile background
+  firstline,
+  secondline,
+  firstLineColor,
+  secondLineColor,
   buttontextC,
   buttonbg
 }) => {
-  const [bgImage, setBgImage] = useState(image2);
+  // Track whether viewport is "mobile" (≤768px)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
   useEffect(() => {
     const handleResize = () => {
-      setBgImage(window.innerWidth <= 768 ? image2Mobile : image2);
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // Set initially
-    window.addEventListener('resize', handleResize); // Update on resize
-
+    handleResize(); // run it once on mount
+    window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [image2, image2Mobile]);
+  }, []);
 
+  // Only build a style‐object if we're on mobile
+  const mobileBgStyle = isMobile
+    ? { backgroundImage: `url(${image2Mobile})` }
+    : {};
 
   return (
     <section
       className="hero2"
-      style={{ backgroundImage: `url(${bgImage})` }}>
-<div
-  className="hero2-container"
- 
->
+      style={{
+        /* desktop: {} (no background), mobile: { backgroundImage: 'url(...)' } */
+        ...mobileBgStyle
+      }}
+    >
+      {/* Left Text Side */}
+      <div className="hero2-text-wrapper">
+        <h1 className="hero2-heading" style={{ color: firstLineColor }}>
+          {firstline}
+        </h1>
+        <p className="hero2-subtext" style={{ color: secondLineColor }}>
+          {secondline}
+        </p>
+        <a
+          href="/"
+          className="hero2-btn"
+          style={{
+            backgroundColor: buttonbg,
+            color: buttontextC,
+          }}
+        >
+          Download Now
+        </a>
+      </div>
 
-        {/* Left Text Side */}
-        <div className="hero2-text-wrapper">
-          <h1 className="hero2-heading" style={{ color: firstLineColor }}>
-            {firstline}
-          </h1>
-          <p className="hero2-subtext" style={{ color: secondLineColor }}>
-            {secondline}
-          </p>
-          <a href="/" className="hero2-btn"style={{
-                backgroundColor: buttonbg,
-                
-                color: buttontextC,
-              }}>
-            Download Now
-          </a>
-        </div>
-
-        {/* Right Image */}
-        <div className="hero2-image-wrapper">
-          <img src={image} alt="phone" className="hero2-image" />
-        </div>
-
+      {/* Right Image (phone mockup) */}
+      <div className="hero2-image-wrapper">
+        <img src={image} alt="phone" className="hero2-image" />
       </div>
     </section>
   );

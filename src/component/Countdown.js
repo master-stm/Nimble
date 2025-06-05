@@ -31,53 +31,79 @@ const Countdown = () => {
     <section
       className="py-5 text-center"
       style={{
-        backgroundColor: '#E8F8E4',
+        backgroundColor: "#E8F8E4",
+        height: "40vh",
         backgroundImage:
-          'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.01) 10px, rgba(0,0,0,0.01) 20px)',
-        fontFamily: 'Lato, sans-serif',
+          "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.01) 10px, rgba(0,0,0,0.01) 20px)",
+        fontFamily: "Lato, sans-serif",
       }}
     >
-      <h2 className="fw-bold mb-4" style={{ fontSize: '1.8rem' }}>
-        Launching soon! <span role="img" aria-label="rocket">🚀</span>
+      <h2 className="fw-bold mb-4" style={{ fontSize: "1.8rem" }}>
+        Launching soon!{" "}
+        <span role="img" aria-label="rocket">
+          🚀
+        </span>
       </h2>
 
       <div className="countdown-wrapper d-flex justify-content-center gap-3 flex-wrap">
-
         {/* Day Box */}
-            <div className="px-4 py-3 rounded countdown-box" style={{ backgroundColor: '#E2F5DB' }}>
-            <h3 className="fw-bold mb-0 ticker-number" style={{ color: '#074F51', fontSize: '2rem' }} key={timeLeft.days}>
-                {timeLeft.days}
-            </h3>
-            <small className="text-muted">Days</small>
-            </div>
+        <div
+          className="px-4 py-3 rounded countdown-box"
+          style={{ backgroundColor: "#E2F5DB" }}
+        >
+          <h3
+            className="fw-bold mb-0 ticker-number"
+            style={{ color: "#074F51", fontSize: "2rem" }}
+            key={timeLeft.days}
+          >
+            {timeLeft.days}
+          </h3>
+          <small className="text-muted">Days</small>
+        </div>
 
-            {/* Hour Box */}
-            <div className="px-4 py-3 rounded countdown-box" style={{ backgroundColor: '#E2F5DB' }}>
-            <h3 className="fw-bold mb-0 ticker-number" style={{ color: '#074F51', fontSize: '2rem' }} key={timeLeft.hours}>
-                {timeLeft.hours}
-            </h3>
-            <small className="text-muted">Hours</small>
-            </div>
+        {/* Hour Box */}
+        <div
+          className="px-4 py-3 rounded countdown-box"
+          style={{ backgroundColor: "#E2F5DB" }}
+        >
+          <h3
+            className="fw-bold mb-0 ticker-number"
+            style={{ color: "#074F51", fontSize: "2rem" }}
+            key={timeLeft.hours}
+          >
+            {timeLeft.hours}
+          </h3>
+          <small className="text-muted">Hours</small>
+        </div>
 
-            {/* Minute Box */}
-            <div className="px-4 py-3 rounded countdown-box" style={{ backgroundColor: '#E2F5DB' }}>
-            <h3 className="fw-bold mb-0 ticker-number" style={{ color: '#074F51', fontSize: '2rem' }} key={timeLeft.minutes}>
-                {timeLeft.minutes}
-            </h3>
-            <small className="text-muted">Minutes</small>
-            </div>
+        {/* Minute Box */}
+        <div
+          className="px-4 py-3 rounded countdown-box"
+          style={{ backgroundColor: "#E2F5DB" }}
+        >
+          <h3
+            className="fw-bold mb-0 ticker-number"
+            style={{ color: "#074F51", fontSize: "2rem" }}
+            key={timeLeft.minutes}
+          >
+            {timeLeft.minutes}
+          </h3>
+          <small className="text-muted">Minutes</small>
+        </div>
         {/* Second Box */}
-            <div className="px-4 py-3 rounded countdown-box" style={{ backgroundColor: '#E2F5DB' }}>
-            <h3
-                className="fw-bold mb-0 ticker-number-animate"
-                style={{ color: '#074F51', fontSize: '2rem' }}
-                key={timeLeft.seconds}
-            >
-                {String(timeLeft.seconds).padStart(2, '0')}
-            </h3>
-            <small className="text-muted">Seconds</small>
-            </div>
-
+        <div
+          className="px-4 py-3 rounded countdown-box"
+          style={{ backgroundColor: "#E2F5DB" }}
+        >
+          <h3
+            className="fw-bold mb-0 ticker-number-animate"
+            style={{ color: "#074F51", fontSize: "2rem" }}
+            key={timeLeft.seconds}
+          >
+            {String(timeLeft.seconds).padStart(2, "0")}
+          </h3>
+          <small className="text-muted">Seconds</small>
+        </div>
       </div>
     </section>
   );

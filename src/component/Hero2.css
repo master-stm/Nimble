@@ -1,134 +1,147 @@
-* {
-  box-sizing: border-box;
-}
-.hero2 {
-  background-size: cover;
-  width: 100%;
-  height: auto; 
-  padding: 0; 
-  background-position: center;
-  background-repeat: no-repeat;
-
-
-}
-
-.hero2-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
-
-
-}
-
-.hero2-text-wrapper {
-  max-width: 500px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.hero2-heading {
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero2-subtext {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero2-btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.hero2-image-wrapper {
-  width: 360px;
-  height: 350px;
-  display: flex;
-  justify-content: center;    
-  align-items: flex-end;  
-  margin-bottom: 0;
-  overflow: hidden;
-  
-}
-
-.hero2-image {
-  max-width: 90%;
-  height: auto;
-  margin: 0;          
-}
-
-/* Responsive layout for mobile */
-@media (max-width: 768px) {
+/* ────────────────────────────────────────────────────
+   BASE STYLES
+   ──────────────────────────────────────────────────── */
+   * {
+    box-sizing: border-box;
+  }
   
   .hero2 {
-    width: 100vw;               /* full screen width */
-    height: 100vh;              /* full screen height */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-  }
-  .hero2-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%;
     width: 100%;
-
-
-  }
-
-  .hero2-text-wrapper {
-    align-items: start;
-    text-align: start;
-    margin-top: 60px;
-    max-width: 100%;
-    padding: 1rem;
-
-
-  }
-
-  .hero2-heading {
-    font-size: 2rem;
-  }
-
-  .hero2-subtext {
-    font-size: 1rem;
-  }
-
-  .hero2-btn {
-    width: 100%;
-    max-width: 200px;
+    height: 60vh; 
+    padding: 0;
     
-  }
-
-  .hero2-image-wrapper {
-
-  width: 452px;
-  height: 452px;
-  display: flex;
-  justify-content: center;    
-  align-items: flex-end;      
-  overflow: hidden;
-  margin-bottom: 0px;
+    /* make .hero2 the flex container now */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
   
-
-  .hero2-image {
-    max-width: 90%;
-    height: auto;
-    margin: 0;             
+  /* TEXT SIDE */
+  .hero2-text-wrapper {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
   }
-}
+  
+  .hero2-heading {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero2-subtext {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero2-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  /* IMAGE SIDE */
+  .hero2-image-wrapper {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    aspect-ratio: 4/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: visible;          /* still hide any tiny bits that might try to escape */
+  }
+  
+  .hero2-image {
+    max-width: 100%;           /* never exceed wrapper’s width */
+    max-height:100%;          /* never exceed wrapper’s height */
+    width: auto;               /* let browser pick width, maintaining aspect ratio */
+    height: auto;              /* let browser pick height, maintaining aspect ratio */
+    object-fit: cover;       /* ensures the entire image fits, leaving empty letterbox if needed */
+    display: flex;
+    align-self: last baseline;
+
+  }
+  
+  /* ────────────────────────────────────────────────────
+     MOBILE BREAKPOINT (max-width: 768px)
+     ──────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .hero2 {
+      width: 100vw;       /* fill full viewport width */
+      height: 100vh;      /* fill full viewport height on mobile */
+      margin: 0;
+      padding: 0;
+  
+      display: flex;     
+      flex-direction: column;
+      justify-content: space-between; /* top = text, bottom = image */
+      align-items: center;
+  
+      /* We do NOT set background-image here; React’s inline style will do that. */
+      background-size: cover;       /* scale so the entire width is covered */
+      background-position: right center; 
+        /* “push” the big mint curve all the way to the right, centered vertically */
+      background-repeat: no-repeat;
+    }
+  
+    .hero2-text-wrapper {
+      padding: 1rem;
+      margin-top: 40px;
+      width: 100%;
+      max-width: 90%;   /* leave some breathing room on the sides */
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .hero2-heading {
+      font-size: 2rem;
+    }
+  
+    .hero2-subtext {
+      font-size: 1rem;
+    }
+  
+    .hero2-btn {
+      width: 100%;
+      max-width: 200px;
+    }
+  
+    .hero2-image-wrapper {
+      /* Remove aspect‐ratio so it can grow/take 100% height */
+      width: 100%;
+      
+      /* Instead of forcing 4:3, let height follow flex rules: */
+      height: 100%;            /* attempt to fill parent’s height */
+      
+      display: flex;
+      justify-content: center;  /* center image horizontally */
+      align-items: center;      /* center image vertically */
+      
+      overflow: hidden;         
+  
+     
+      
+      /* Flex: let this wrapper take up all leftover space */
+      flex: 1 1 auto;           /* grow/shrink so it fills parent */
+    }
+  
+    .hero2-image {
+      max-width: 100%;
+      max-height: 100%;
+
+      object-fit: contain;       /* no cropping; entire image visible */
+      width: auto;               /* keep natural aspect ratio */
+   
+    }
+  }
+  
