@@ -28,13 +28,15 @@ const Hero2 = ({
   // Only build a style‐object if we're on mobile
   const mobileBgStyle = isMobile
     ? { backgroundImage: `url(${image2Mobile})` }
-    : {};
+    : {
+        backgroundImage: `url(${image2})`,
+      };
 
   return (
     <section
       className="hero2"
       style={{
-        /* desktop: {} (no background), mobile: { backgroundImage: 'url(...)' } */
+        /* desktop: {} (no background), mobile: {  } */
         ...mobileBgStyle
       }}
     >

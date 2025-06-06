@@ -30,22 +30,22 @@ const CarouselComponent = ({
 
               <div className="slide-content">
                 <div className="left-side">
-              {(
-                <img
-                src={isMobile ? slide.m_vector : slide.vector1}
-                  alt="Background Curve"
-                  className={`background-curve background-curve-${index}`}
-                />
-              )}
+                            {(
+                              <img
+                              src={isMobile ? slide.m_vector : slide.vector1}
+                                alt="Background Curve"
+                                className={`background-curve background-curve-${index}`}
+                              />
+                            )}
 
-<div className={`slide-image-wrapper slide-image-wrapper-${index}`}>
-<img
-                      src={isMobile ? slide.imageMobile : slide.imageDesktop}
-                      alt="Hero"
-                      className="slide-text-outer"
-                    />
-                  </div>
-</div>
+                      <div className={`slide-image-wrapper slide-image-wrapper-${index}`}>
+                      <img
+                                    src={isMobile ? slide.imageMobile : slide.imageDesktop}
+                                    alt="Hero"
+                                    className="slide-text-outer"
+                                  />
+                                </div>
+                </div>
                   <div className={`slide-text slide-text-${index}`}>
                     <h2>{slide.headline}</h2>
                     <p>{slide.subtext}</p>

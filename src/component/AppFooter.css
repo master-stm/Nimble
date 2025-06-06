@@ -55,7 +55,17 @@
   font-weight: 600;
 
 }
+.footer-social-outer ,
+.footer-download-outer{
+ display: flex;
+ flex-direction: column;
+ 
+}
+.footer-social-outer p,
+.footer-download-outer p{
 
+  align-self: center;
+ }
 .footer-download img {
   height: 40px;
   width: auto;
@@ -175,6 +185,7 @@
     margin-bottom: 0.5rem;
     
   }
+  
   .footer-contact-outer{
 
     display: flex;

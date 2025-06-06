@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import logo_img from '../images/logo_white.png';
 import Header from '../component/Header'
 
@@ -32,8 +32,10 @@ import two2 from "../images/vector1.png";
 import three3 from "../images/vector.png";
 import totebag_mobile from "../images/totebag_mobile.png";
 import m_vector1 from "../images/m_vector.png";
-import m_vector2 from "../images/m_vector.png";
-import m_vector3 from "../images/m_vector.png";
+import m_vector2 from "../images/m_vector1.png";
+import m_vector3 from "../images/vector2.png";
+import m_two_g from "../images/m_twog.png";
+//import banner_2 from "../images/banner _bg_mobile.png";
 
 const slidesData = [
   {
@@ -50,7 +52,7 @@ const slidesData = [
     imageDesktop: two_g,
     vector1: two2,
     m_vector:m_vector2,
-    imageMobile:totebag_mobile
+    imageMobile:m_two_g
   },
   {
     headline: "Students, stock up!",
@@ -58,7 +60,7 @@ const slidesData = [
     imageDesktop: three_g,
     vector1: three3,
     m_vector:m_vector3,
-    imageMobile:totebag_mobile
+    imageMobile:three_g
   },
 ];
 const NimbleLandingPage = () => {
@@ -68,34 +70,35 @@ const NimbleLandingPage = () => {
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slidesData.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slidesData.length) % slidesData.length);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4000); // 4000ms = 4 seconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextSlide();
+  //   }, 4000); // 4000ms = 4 seconds
 
-    return () => clearInterval(interval); // cleanup
-  }, []);
+  //   return () => clearInterval(interval); // cleanup
+  // }, []);
   
   return (
     <div className="font-sans">
-            {/* Navigation Bar */}
-              <Header image={logo_img} />
-          
-            {/* You can now continue with the rest of the page sections below */}
-            {/* Hero Section */}
-            <Hero2 image={imageA}  
-            buttontextC = "#fff"
-            buttonbg = "#074F51"
-            firstLineColor="#074F51"
-            secondLineColor ="#7A7A7A"   
-             
-             firstline ="Grocery shopping, now fun & quicker" 
-             secondline="Download the Nimble app and be among the first to shop at Neighbors Market" />
+      {/* Navigation Bar */}
+      <Header image={logo_img} />
+
+      {/* You can now continue with the rest of the page sections below */}
+      {/* Hero Section */}
+      <Hero2
+        image={imageA}
+        buttontextC="#fff"
+        buttonbg="#074F51"
+        firstLineColor="#074F51"
+        secondLineColor="#7A7A7A"
+        firstline="Grocery shopping, now fun & quicker"
+        secondline="Download the Nimble app and be among the first to shop at Neighbors Market"
+      />
 
       {/* Countdown Section */}
       <Countdown />
       {/* Custom Promo Slider */}
-       <CarouselComponent
+      <CarouselComponent
         slides={slidesData}
         currentSlide={currentSlide}
         setCurrentSlide={setCurrentSlide}
@@ -103,46 +106,51 @@ const NimbleLandingPage = () => {
         prevSlide={prevSlide}
       />
 
-      <section className="features-wrapper">
-              <h2 className="features-heading">How it Works</h2>
+      <section id="hiw"className="features-wrapper">
+        <h2  className="features-heading">
+          How it Works
+        </h2>
 
-              <FeatureBlock
-                icon={slide2}
-                title="Snap, pay & go"
-                text="Skip the checkout lines! Simply scan items with your phone as you shop, pay through the app, and walk out. Shopping made effortless."
-                image={feature1}
-                sicon={one}
-              />
-              <FeatureBlock
-                icon={slide2}
-                title="Order & pickup"
-                text="Shop online, we'll prepare your order. Drive up to our convenient pickup spots and we'll load your groceries straight into your car."
-                image={feature2}
-                sicon={two}
-                reverse
-              />
-              <FeatureBlock
-                icon={slide2}
-                title="Recipe based shopping"
-                text="Discover new meals and add all ingredients to your cart with one tap. Turn dinner inspiration into a complete shopping list instantly."
-                image={feature3}
-                sicon={three}
-              />
-            </section>
+        <FeatureBlock
+          icon={slide2}
+          title="Snap, pay & go"
+          text="Skip the checkout lines! Simply scan items with your phone as you shop, pay through the app, and walk out. Shopping made effortless."
+          image={feature1}
+          sicon={one}
+        />
+        <FeatureBlock
+          icon={slide2}
+          title="Order & pickup"
+          text="Shop online, we'll prepare your order. Drive up to our convenient pickup spots and we'll load your groceries straight into your car."
+          image={feature2}
+          sicon={two}
+          reverse
+        />
+        <FeatureBlock
+          icon={slide2}
+          title="Recipe based shopping"
+          text="Discover new meals and add all ingredients to your cart with one tap. Turn dinner inspiration into a complete shopping list instantly."
+          image={feature3}
+          sicon={three}
+        />
+      </section>
 
-    
-      <Hero2 image={image2}  
-             image2={imagebackA}  
-             image2Mobile={image_mobilebg}
-            buttontextC = "#064E3B"
-            buttonbg = "#A4EC8A"
-            firstLineColor="#fff"
-            secondLineColor ="#fff"  
-             firstline ="Ready to try Nimble?" 
-             secondline="Download now and get a free goodie bag at Neighbors Market on June 14th!" />
-<AppFooter />
-      <Footer bgColor="#A4EC8A" textColor="#064E3B" />
-
+      <Hero2
+        image={image2}
+        image2={imagebackA}
+        image2Mobile={image_mobilebg}
+        buttontextC="#064E3B"
+        buttonbg="#A4EC8A"
+        firstLineColor="#fff"
+        secondLineColor="#fff"
+        firstline="Ready to try Nimble?"
+        secondline="Download now and get a free goodie bag at Neighbors Market on June 14th!"
+      />
+      <AppFooter />
+      <div id="cu">
+        <Footer bgColor="#A4EC8A" textColor="#064E3B" />
+      </div>
+      
     </div>
   );
 };

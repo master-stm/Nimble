@@ -277,223 +277,192 @@ width: clamp(15%, 15vw, 85%);
    MOBILE‐ONLY STYLES (≤ 768px)
    ============================== */
    @media (max-width: 768px) {
+    .carousel-viewport {
+      overflow-x: hidden;
+      position: relative;
+    
+      padding: 0; /* remove horizontal padding */
+    }
+ 
 
     .carousel-slide {
-      height: 80vh; /* increase from 500px to 700px on mobile */
-      /* You can also switch to a vh‐based height if you want it relative to viewport:
-         height: 80vh;  /* 80% of the viewport height */
-      
+      height: 80vh; /* or whatever new height you need on mobile */
+  
+      width: 100%;
+      display: none;
+
     }
-    /****** 1) Make the entire slide stack in a column, with text on top and vector+image below ******/
+
+    /* 2) Stack everything in a column: text on top, vector+image at bottom */
     .slide-content {
       display: flex;
-      flex-direction: column-reverse;    /* slide-text will appear above left-side */
-      justify-content: space-around;       /* push content toward the top */
-      align-items: center;               /* center everything horizontally */
-      text-align: center;                /* center text inside slide-text */
-      padding: 1rem;                     /* small padding around */
-      position: relative;
-      width: 100%;
-      height: 100%;                      /* slide height will grow to fit content */
-      border: 5px solid red;
+      flex-direction: column-reverse; /* slide-text appears above left-side */
+      justify-content: space-between; /* push text to top and curve+image to bottom */
+     width: 100%;
+
+     margin: 0 !important;
+     padding: 0 !important;
+    
+      /* remove any debugging borders: */
+      /* border: none; */
     }
   
-    /****** 2) Left‐side (vector + overlaid image) becomes a full‐width, stacked block ******/
+    /* 3) Force .left-side to always be 100% of its parent’s width */
     .left-side {
       display: flex;
-      flex-direction: column;            /* stack vector first, then image */
-      align-items: center;               /* center horizontally */
-      justify-content: center;           /* center vertically if extra space */
-      width: 100%;                       /* take 100% of slide width */
-      margin: 0;                         /* remove any desktop margin */
-      padding: 0;                        /* remove any desktop padding */
-      position: relative;                /* needed for stacking the overlaid image */
-      box-sizing: border-box;
-      border: 5px solid green;
+      flex-direction: column;
+      align-items: center;
+      justify-content:flex-end;
+      width: 100% !important;
+
+
     }
-  
-    /****** 3) Background‐curve adjustments: span full width and auto‐height ******/
-    .background-curve-0,
-    .background-curve-1,
-    .background-curve-2 {
-      width: 100% !important;            /* full container width on mobile */
-      height: auto !important;           /* maintain original aspect ratio */
-      margin: 0 !important;              /* remove any desktop margins */
-      position: relative;                /* stay in normal flow */
-      z-index: 0;                        /* sit behind the phone image */
-      pointer-events: none;              /* ensure taps/clicks pass through */
-      object-fit: cover;                 /* scale proportionally to fill width */
-    }
-  
-    /****** 4) Phone image wrapper: center and scale the phone ******/
-    .slide-image-wrapper-0,
-    .slide-image-wrapper-1,
-    .slide-image-wrapper-2 {
-      position: relative;                /* normal flow inside left-side */
-      width: 80%;                        /* phone occupies ~80% of container width */
-      max-width: 300px;                  /* cap the phone size so it doesn’t get too big */
-      height: auto;                      /* height determined by Image’s aspect ratio */
-      margin: 0.5rem 0;                  /* vertical spacing above/below the phone */
-      display: flex;
-      align-items: center;               /* center phone vertically if extra space */
-      justify-content: center;           /* center phone horizontally */
-      z-index: 1;                        /* place phone above the curve */
-      overflow: visible;                 /* allow edges to show */
-      box-sizing: border-box;
-    }
-    .slide-image-wrapper-0 img,
-    .slide-image-wrapper-1 img,
-    .slide-image-wrapper-2 img {
-      width: 100%;                       /* fill entire wrapper width */
-      height: auto;                      /* maintain natural aspect ratio */
-      object-fit: contain;               /* show full phone, no cropping */
-      display: block;                    /* eliminate inline‐img gap */
-    }
-  
-    /****** 5) Slide‐text adjustments: full width, centered text and button ******/
-    .slide-text-0,
-    .slide-text-1,
-    .slide-text-2 {
-      display: flex;
-      flex-direction: column;            /* stack heading, paragraph, button */
-      align-items: center;               /* center text and button horizontally */
-      justify-content: center;           /* center vertically if extra space */
-      width: 100%;                       /* occupy full width on mobile */
-      margin: 1rem 0 0;                  /* top margin to separate from curve/image */
-      padding: 0 1rem;                   /* horizontal padding for breathing room */
-      box-sizing: border-box;
-      border: 5px solid green;
-    }
-    .slide-text-0 h2,
-    .slide-text-1 h2,
-    .slide-text-2 h2 {
-      font-size: 1.6rem;                 /* slightly smaller than desktop (1.8rem) */
-      line-height: 1.2;
-      font-weight: 600;
-      color: #004C45;                    /* dark‐green heading color */
-      margin-bottom: 0.5rem;             /* space between heading & paragraph */
-    }
-    .slide-text-0 p,
-    .slide-text-1 p,
-    .slide-text-2 p {
-      font-size: 1rem;                   /* standard mobile body size */
-      color: #333333;
-      margin-bottom: 1rem;               /* space between paragraph & button */
-    }
-    .slide-text-0 .download-btn,
-    .slide-text-1 .download-btn,
-    .slide-text-2 .download-btn {
-      width: 100%;
-      max-width: 200px;                  /* cap the button width */
-      padding: 0.75rem 1.25rem;
-      background-color: #074F51;         /* dark‐green */
-      color: #FFFFFF;
+    .download-btn {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #074F51;
+      color: #ffffff;
       border: none;
-      border-radius: 999px;              /* fully rounded pill shape */
-      font-size: 1rem;
+      z-index: 2;
+      border-radius: 999px;
       font-weight: 600;
       cursor: pointer;
-      text-align: center;
     }
-  
-    /****** 6) Hide arrows, adjust dots for mobile if needed ******/
-    .carousel-btn.prev,
-    .carousel-btn.next {
-      display: none;                     /* hide prev/next arrows on mobiles */
-    }
-    .carousel-dots {
-      margin-top: 1rem;                  /* spacing above dots */
-      text-align: center;
-    }
-    .dot {
-      width: 30px;                       /* slightly smaller dot width */
-      height: 5px;                       /* slightly smaller dot height */
-      margin: 0 4px;
-      border-radius: 5px;
-    }
-    .dot.active {
-      background-color: #004C45;         /* dark‐green active dot */
-    }
+    
     .background-curve-0 {
   
-  
-      height: 100%;
-      width: 70%;
-  
+
+      height: 100% !important;
+      width: 130% !important;
+
   
       z-index: 0;
         pointer-events: none;
   
       }
+  
       .slide-image-wrapper-0 {
-        margin-left: 8%;
-              position: absolute;
+
+           margin: 0;
+              margin-left: 10%;
+             
         
-              display: flex;
-              flex-direction: row;
-              align-self: flex-start;
-        
-              width: auto;
+              width: 80%;
         object-fit: cover;
-          
-              z-index: 0; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
         
              overflow: hidden;
         
             }
             .background-curve-1 {
   
-  
-              height: 100%;
-              width: 70%;
-          
+    
+
+              
+              width: 110% !important;
+        
           
               z-index: 0;
                 pointer-events: none;
           
               }
               .slide-image-wrapper-1 {
-                margin-left: 8%;
-                      position: absolute;
-                
-                      display: flex;
-                      flex-direction: row;
-                      align-self: flex-start;
-                
-                      width: auto;
-                object-fit: cover;
-                  
-                      z-index: 0; 
-                
-                     overflow: hidden;
+                margin: 0 !important;
+              position: absolute !important;
+       
+
+               
                 
                     }
+                 
                     .background-curve-2 {
   
   
-                      height: 100%;
-                      width: 70%;
-                  
+                      height: 50%;
+                      width: 50%;
+                
                   
                       z-index: 0;
                         pointer-events: none;
-                  
+                  display: none !important;
+
+                      }
+                      .carousel-slide,
+                      .slide-content,
+                      .left-side,
+                      .slide-image-wrapper-2 {
+                        padding: 0 !important;
+                        margin: 0 !important;
+                        box-sizing: border-box;
+                        width: 100% !important;
                       }
                       .slide-image-wrapper-2 {
-                        margin-left: 8%;
-                              position: absolute;
-                        
-                              display: flex;
-                              flex-direction: row;
-                              align-self: flex-start;
-                        
-                              width: auto;
-                        object-fit: cover;
-                          
-                              z-index: 0; 
-                        
-                             overflow: hidden;
-                        
-                            }
+                        position: static !important;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100% !important;
+                        height: auto;
+                    
+    
+                        overflow: hidden;
+                      }
+                    
+                      .slide-image-wrapper-2 .slide-text-outer {
+                        width: 100%;                /* Keeps image nicely sized */
+                        max-width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                        display: block;
+             
+
+                      }
+.slide-text{
+
+  margin-left: 14% !important;
+  width: auto;
+  height: auto;
+  display: flex;
+  
+  align-self: center;
+  border-radius: 5px
+
+}
+.slide-text-2 {
+margin-top: 13%;
+}
+    /* 7) Hide carousel arrows, shrink dots for mobile */
+    .carousel-btn.prev,
+    .carousel-btn.next {
+      display: none;
+    }
+    .carousel-dots {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .dot {
+      width: 30px;
+      height: 5px;
+      margin: 0 4px;
+      border-radius: 5px;
+    }
+    .dot.active {
+      background-color: #004C45;
+    }
+    .background-curve-0 {
+  
+  
+      height: 100%;
+      width: 100%;
+  
+  
+      z-index: 0;
+        pointer-events: none;
+  
+      }
   }
   
