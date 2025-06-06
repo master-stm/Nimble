@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import logo_img from '../images/logo_white.png';
 import Header from '../component/Header'
 
@@ -71,13 +71,13 @@ const NimbleLandingPage = () => {
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slidesData.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slidesData.length) % slidesData.length);
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     nextSlide();
-  //   }, 4000); // 4000ms = 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000); // 4000ms = 4 seconds
 
-  //   return () => clearInterval(interval); // cleanup
-  // }, []);
+    return () => clearInterval(interval); // cleanup
+  }, []);
   
   return (
     <div className="font-sans">
