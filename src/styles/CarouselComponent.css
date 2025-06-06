@@ -198,6 +198,7 @@ width: clamp(15%, 15vw, 85%);
   flex-direction: column;
   justify-content: center;
   margin-right: 14%;
+
  
 
 }
@@ -314,6 +315,7 @@ width: clamp(15%, 15vw, 85%);
       align-items: center;
       justify-content:flex-end;
       width: 100% !important;
+      height: 70% !important;
 
 
     }
@@ -332,7 +334,7 @@ width: clamp(15%, 15vw, 85%);
     .background-curve-0 {
   
 
-      height: 100% !important;
+      height: 70% !important;
       width: 130% !important;
 
   
@@ -346,7 +348,7 @@ width: clamp(15%, 15vw, 85%);
            margin: 0;
               margin-left: 10%;
              
-        
+     
               width: 80%;
         object-fit: cover;
           display: flex;
@@ -378,6 +380,7 @@ width: clamp(15%, 15vw, 85%);
                 justify-content: center;
                 align-items: center;
                 overflow: visible;
+              
               }
           
                     .slide-image-wrapper-1 img {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './countdown.css';
+import '../styles/countdown.css';
 const Countdown = () => {
   const calculateTimeLeft = () => {
     const targetDate = new Date('2025-06-14T11:00:00');

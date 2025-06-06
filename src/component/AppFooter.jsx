@@ -1,5 +1,5 @@
 import React from 'react';
-import './AppFooter.css';
+import '../styles/AppFooter.css';
 import StoreButton from './StoreButton';
 import appStoreBadge from '../images/apple.png';
 import playStoreBadge from '../images/playstore.png';

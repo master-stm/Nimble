@@ -1,5 +1,5 @@
 import React from 'react';
-import './StoreButton.css';
+import '../styles/StoreButton.css';
 
 const StoreButton = ({ logo, line1, line2, link }) => {
   return (

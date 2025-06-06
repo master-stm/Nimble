@@ -1,6 +1,6 @@
 // HeroSection.js
 import React, {useEffect,useRef} from 'react';
-import './hero.css';
+import '../styles/hero.css';
 
 const HeroSection = ({
   image,

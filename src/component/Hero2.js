@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Hero2.css';
+import '../styles/Hero2.css';
 
 const Hero2 = ({
   image,        // phone mockup
