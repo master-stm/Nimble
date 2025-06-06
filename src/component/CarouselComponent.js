@@ -49,7 +49,16 @@ const CarouselComponent = ({
                   <div className={`slide-text slide-text-${index}`}>
                     <h2>{slide.headline}</h2>
                     <p>{slide.subtext}</p>
-                    <button className="download-btn">Download Now</button>
+                      {/* Apply the slide‐specific colors here: */}
+                      <button
+                      className="download-btn"
+                      style={{
+                        backgroundColor: slide.buttonBg,
+                        color: slide.buttonTextColor
+                      }}
+                    >
+                      Download Now
+                    </button>
                   </div>
                 
               </div>

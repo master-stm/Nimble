@@ -45,7 +45,9 @@ const slidesData = [
     imageDesktop: totebag,
     vector1: one1,
     m_vector:m_vector1,
-    imageMobile:totebag_mobile
+    imageMobile:totebag_mobile,
+    buttonBg: "#A6EC8A",       
+    buttonTextColor: "#074F51" 
   },
   {
     headline: "Refer 5 & get 15% off!",
@@ -53,7 +55,9 @@ const slidesData = [
     imageDesktop: two_g,
     vector1: two2,
     m_vector:m_vector2,
-    imageMobile:m_two_g
+    imageMobile:m_two_g,
+    buttonBg: "#074F51",        
+    buttonTextColor: "#A6EC8A" 
   },
   {
     headline: "Students, stock up!",
@@ -61,7 +65,9 @@ const slidesData = [
     imageDesktop: three_g,
     vector1: three3,
     m_vector:mvector3,
-    imageMobile:three_g
+    imageMobile:three_g,
+    buttonBg: "#A6EC8A",        
+    buttonTextColor: "#074F51" 
   },
 ];
 const NimbleLandingPage = () => {

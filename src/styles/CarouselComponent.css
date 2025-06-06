@@ -1,3 +1,11 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+*, *::before, *::after {
+  font-family: 'Lato', sans-serif;
+}
+
 .carousel-viewport {
   overflow-x: hidden;
   position: relative;
@@ -299,14 +307,14 @@ width: clamp(15%, 15vw, 85%);
     .slide-content {
       display: flex;
       flex-direction: column-reverse; /* slide-text appears above left-side */
-      justify-content: space-between; /* push text to top and curve+image to bottom */
+      justify-content: space-around !important; /* push text to top and curve+image to bottom */
      width: 100%;
 
+  
      margin: 0 !important;
      padding: 0 !important;
     
-      /* remove any debugging borders: */
-      /* border: none; */
+  
     }
   
     /* 3) Force .left-side to always be 100% of its parent’s width */
@@ -318,7 +326,21 @@ width: clamp(15%, 15vw, 85%);
       width: 100% !important;
       height: 70% !important;
 
+     
+    }
+    .slide-text{
 
+      margin: 0 !important;
+      position: relative;
+      width: auto;
+      height: 500px !important;
+      display: flex;
+      z-index: 2 !important;
+      align-self: center;
+      border-radius: 5px;
+     
+    
+    
     }
     .download-btn {
       margin-top: 1rem;
@@ -326,10 +348,16 @@ width: clamp(15%, 15vw, 85%);
       background-color: #074F51;
       color: #ffffff;
       border: none;
+    /* exactly 84px tall */
+      width: 60%;
+      font-size: 1rem;
       z-index: 2;
       border-radius: 999px;
-      font-weight: 600;
+      display: block;   /* ensures the button is a block‐level element */
+      margin: 0 auto;   /* center horizontally (if its parent is full‐width) */
+      box-sizing: border-box;
       cursor: pointer;
+      align-self: center;
     }
     
     .background-curve-0 {
@@ -366,9 +394,9 @@ width: clamp(15%, 15vw, 85%);
     
 
               
-              width: 110% !important;
-        
-          
+              width: 100% !important;
+              position: absolute !important;
+              height: 66%;
               z-index: 0;
                 pointer-events: none;
           
@@ -433,25 +461,8 @@ width: clamp(15%, 15vw, 85%);
              
 
                       }
-.slide-text{
-
-  margin-left: 14% !important;
-  width: auto;
-  height: auto;
-  display: flex;
-  z-index: 2 !important;
-  align-self: center;
-  border-radius: 5px;
 
 
-}
-.slide-text-1{
-  margin-top: 13%;
-
-}
-.slide-text-2 {
-margin-top: 13%;
-}
     /* 7) Hide carousel arrows, shrink dots for mobile */
     .carousel-btn.prev,
     .carousel-btn.next {
