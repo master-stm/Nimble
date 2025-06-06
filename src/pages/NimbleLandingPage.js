@@ -33,9 +33,10 @@ import three3 from "../images/vector.png";
 import totebag_mobile from "../images/totebag_mobile.png";
 import m_vector1 from "../images/m_vector.png";
 import m_vector2 from "../images/m_vector1.png";
-import m_vector3 from "../images/vector2.png";
+
 import m_two_g from "../images/m_twog.png";
-//import banner_2 from "../images/banner _bg_mobile.png";
+import mvector3 from "../images/mvector3.png";
+
 
 const slidesData = [
   {
@@ -59,7 +60,7 @@ const slidesData = [
     subtext: "Get upto 20% off groceries for next 3 months",
     imageDesktop: three_g,
     vector1: three3,
-    m_vector:m_vector3,
+    m_vector:mvector3,
     imageMobile:three_g
   },
 ];

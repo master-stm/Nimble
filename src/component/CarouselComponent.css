@@ -370,24 +370,31 @@ width: clamp(15%, 15vw, 85%);
           
               }
               .slide-image-wrapper-1 {
-                margin: 0 !important;
-              position: absolute !important;
-       
-
-               
-                
+    
+                margin: 0 auto !important;
+                width: 90% !important;
+                height: auto !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: visible;
+              }
+          
+                    .slide-image-wrapper-1 img {
+                      width: 100% !important;
+                      height: auto !important;
+                      object-fit: contain !important;
+                      display: block;
                     }
-                 
                     .background-curve-2 {
   
-  
-                      height: 50%;
-                      width: 50%;
-                
-                  
-                      z-index: 0;
-                        pointer-events: none;
-                  display: none !important;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      z-index: -0;
+                      width: 100%;
+                      height: auto;
+                      pointer-events: none;
 
                       }
                       .carousel-slide,
@@ -427,9 +434,10 @@ width: clamp(15%, 15vw, 85%);
   width: auto;
   height: auto;
   display: flex;
-  
+  z-index: 2 !important;
   align-self: center;
-  border-radius: 5px
+  border-radius: 5px;
+  border: 1px solid black;
 
 }
 .slide-text-2 {
