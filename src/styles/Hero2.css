@@ -45,6 +45,7 @@
     font-weight: 600;
     font-size: 1.1rem;
     text-decoration: none;
+    text-align: center;
     display: inline-block;
   }
   
@@ -115,6 +116,7 @@
     .hero2-btn {
       width: 100%;
       max-width: 200px;
+      text-align: center !important;
     }
   
     .hero2-image-wrapper {
