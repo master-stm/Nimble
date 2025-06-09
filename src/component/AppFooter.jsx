@@ -10,16 +10,23 @@ const AppFooter = () => {
   <footer className="app-footer">
     <div className='app-footer-inside'>
       {/* Column 1: Shop links */}
-      <div className="footer-col footer-links">
-        <a href="/shop-fast">Shop Fast</a>
-        <a href="/shop-smart">Shop Smart</a>
-        <a href="/shop-nimble">Shop Nimble</a>
+      <div className="footer-col footer-links"
+      style={{
+        fontWeight: 600,
+        fontSize: '1rem',
+        color: '#074F51',
+        
+      }}
+      >
+        <p>Shop Fast</p>
+        <p>Shop Smart</p>
+        <p>Shop Nimble</p>
       </div>
 
       {/* Column 2: Store badges */}
       <div className="footer-download-outer">
       <p style={{ color: 'black' ,
-                  fontWeight: 600 
+                  fontWeight: 600 , marginBottom: '1.2em'
                   
                   }}>Get the app</p>
   <div className='footer-download-outer'>
@@ -29,7 +36,7 @@ const AppFooter = () => {
           <StoreButton
   logo={appStoreBadge}
   line1="Download on"
-  line2="App store"
+  line2="App Store"
   link="https://apps.apple.com"
 />
 
@@ -37,8 +44,8 @@ const AppFooter = () => {
         <StoreButton
   logo={playStoreBadge}
   line1="Download on"
-  line2="App store"
-  link="https://apps.apple.com"
+  line2="Google Play"
+  link="https://play.google.com/store/"
 />
 </div>
       </div>
@@ -70,8 +77,8 @@ const AppFooter = () => {
               <ul className="footer-social">
 
 
-              <li><a href="https://www.linkedin.com"target="_blank" rel="noreferrer" ><FaLinkedin /></a></li>
-                <li><a href="https://www.instagram.com"target="_blank" rel="noreferrer" ><FaInstagram /></a></li>
+              <li><a href="https://www.linkedin.com/company/getnimbleapp/"target="_blank" rel="noreferrer" ><FaLinkedin /></a></li>
+                <li><a href="https://www.instagram.com/getnimbleapp"target="_blank" rel="noreferrer" ><FaInstagram /></a></li>
 
 
               </ul>

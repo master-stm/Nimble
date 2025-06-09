@@ -13,9 +13,9 @@ export default function Footer({ bgColor = "#fff", textColor = "#064E3B" }) {
           © {new Date().getFullYear()} Motura Inc., Operating under the trade name Nimble. All rights reserved
         </p>
         <ul className="footer-social">
-          <li><a href="/" ><FaInstagram /></a></li>
+          <li><a href="https://www.instagram.com/getnimbleapp"target="_blank" rel="noreferrer" ><FaInstagram /></a></li>
 
-          <li><a href="/"><FaLinkedinIn /></a></li>
+          <li><a href="https://www.linkedin.com/company/getnimbleapp/"target="_blank" rel="noreferrer"><FaLinkedinIn /></a></li>
         </ul>
         <ul className="footer-legal">
           <li><a href="/PrivacyPolicies">Privacy</a></li>

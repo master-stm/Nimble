@@ -1,7 +1,7 @@
 // Import React and necessary libraries
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Terms from "./pages/Terms";
@@ -56,14 +56,14 @@ const App = () => {
         
         <div className="main">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<NimbleLandingPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/PrivacyPolicies" element={<PrivacyPolicies />} />
             <Route path="/Terms" element={<Terms />} />
-            <Route path="/NimbleLandingPage" element={<NimbleLandingPage />} />
-            <Route path="/NimbleLandingPage2" element={<NimbleLandingPage />} />
-            <Route path="/totebag1" element={<GoodieBagPage />} />
+            {/* <Route path="/NimbleLandingPage" element={<NimbleLandingPage />} />
+            <Route path="/NimbleLandingPage2" element={<NimbleLandingPage />} /> */}
+            {/* <Route path="/totebag1" element={<GoodieBagPage />} /> */}
             <Route path="/DeleteAccount" element={<DeleteAccount />} />
           </Routes>
         </div>
