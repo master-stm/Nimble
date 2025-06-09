@@ -21,6 +21,7 @@ const AppFooter = () => {
         <p>Shop Fast</p>
         <p>Shop Smart</p>
         <p>Shop Nimble</p>
+
       </div>
 
       {/* Column 2: Store badges */}
