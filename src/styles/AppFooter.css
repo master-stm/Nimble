@@ -32,7 +32,12 @@
   font-weight: 600;
   font-size: 1rem;
 }
-
+.footer-links text{
+  text-decoration: none;
+  color: #064E3B;
+  font-weight: 600;
+  font-size: 1rem;
+}
 .footer-links a:hover,
 .footer-contact a:hover {
   text-decoration: underline;

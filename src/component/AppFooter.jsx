@@ -11,9 +11,9 @@ const AppFooter = () => {
     <div className='app-footer-inside'>
       {/* Column 1: Shop links */}
       <div className="footer-col footer-links">
-        <a href="/shop-fast">Shop Fast</a>
-        <a href="/shop-smart">Shop Smart</a>
-        <a href="/shop-nimble">Shop Nimble</a>
+            <text>  Shop Fast </text>
+            <text>    Shop Smart</text>
+            <text>       Shop Nimble</text>
       </div>
 
       {/* Column 2: Store badges */}
