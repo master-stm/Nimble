@@ -117,7 +117,7 @@
   }
   
   .features-wrapper {
-    padding: 2.5rem 2rem 4rem 2rem;
+    padding: 0rem 2rem 4rem 2rem;
     background-color: #fff;
   }
   .feature-right {
@@ -158,13 +158,10 @@
   }
   /* Stack everything vertically instead of side-by-side */
   .feature-container {
+    gap: 0;
     display: flex;
     flex-direction: column;
- 
-   
     box-sizing: border-box;
-
-
   }
 
 
@@ -226,5 +223,9 @@
   .floating-icon {
     top: 10px;
     left: calc(50% - 25px); /* centers a 50px-wide icon */
+  }
+  .features-wrapper {
+    padding: 2.5rem 1rem 4rem 1rem;
+    background-color: #fff;
   }
 }

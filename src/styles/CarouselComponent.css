@@ -16,7 +16,7 @@ body {
 
 .carousel-wrapper {
   position: relative;
-  padding: 6rem 3rem;
+  padding: 3rem 6rem 4rem 6rem;
   width: 100%;
   margin: 0 ;
   border-radius: 1.5rem;
@@ -242,6 +242,7 @@ width: clamp(15%, 15vw, 85%);
   border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .carousel-btn {

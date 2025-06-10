@@ -10,7 +10,8 @@ const Hero2 = ({
   firstLineColor,
   secondLineColor,
   buttontextC,
-  buttonbg
+  buttonbg,
+  handleDownloadClick
 }) => {
   // Track whether viewport is "mobile" (≤768px)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -35,13 +36,13 @@ const Hero2 = ({
       className="hero2"
       style={{
         /* desktop: {} (no background), mobile: {  } */
-        ...(firstline === "Ready to try Nimble?" ? { height: '62.25vh', padding: 0 } : {}),
+        ...(firstline === "Ready to try Nimble?" ? { height: '454px', padding: 0 } : {}),
         ...(isMobile ? { height: '80vh', padding: 0 } : {}),
         ...mobileBgStyle
       }}
     >
       {/* Left Text Side */}
-      <div className="hero2-text-wrapper">
+      <div className={`${firstline === "Ready to try Nimble?" ? "hero3-text-wrapper" : "hero2-text-wrapper"}`}>
         <h1 className={`${firstline === "Ready to try Nimble?" ? "hero3-heading" : "hero2-heading"}`} style={{ color: firstLineColor }}>
           {firstline}
         </h1>
@@ -49,7 +50,7 @@ const Hero2 = ({
           {secondline}
         </p>
         <a
-          href="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
+          onClick={(e) => { e.preventDefault(); handleDownloadClick() }}
           className={`${firstline === "Ready to try Nimble?" ? "hero3-btn" : "hero2-btn"}`}
           style={{
             backgroundColor: buttonbg,
@@ -61,8 +62,8 @@ const Hero2 = ({
       </div>
 
       {/* Right Image (phone mockup) */}
-      <div className="hero2-image-wrapper" style={{ paddingBottom: firstline === "Ready to try Nimble?" ? '0px' : '24px' }}>
-        <img src={image} alt="phone" className="hero2-image" />
+      <div className="hero2-image-wrapper">
+        <img src={image} alt="phone" className={`${firstline === "Ready to try Nimble?" ? "hero3-image" : "hero2-image"}`} />
       </div>
     </section>
   );

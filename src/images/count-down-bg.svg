@@ -1,0 +1,25 @@
+<svg width="1415" height="270" viewBox="0 0 1415 270" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="283" height="283" transform="translate(0 -7)" fill="url(#pattern0_1_7)" fill-opacity="0.02"/>
+<rect width="283" height="283" transform="translate(283 -7)" fill="url(#pattern1_1_7)" fill-opacity="0.02"/>
+<rect width="283" height="283" transform="translate(566 -7)" fill="url(#pattern2_1_7)" fill-opacity="0.02"/>
+<rect width="283" height="283" transform="translate(849 -7)" fill="url(#pattern3_1_7)" fill-opacity="0.02"/>
+<rect width="283" height="283" transform="translate(1132 -7)" fill="url(#pattern4_1_7)" fill-opacity="0.02"/>
+<defs>
+<pattern id="pattern0_1_7" patternContentUnits="objectBoundingBox" width="0.11" height="0.11">
+<use xlink:href="#image0_1_7" transform="scale(0.005)"/>
+</pattern>
+<pattern id="pattern1_1_7" patternContentUnits="objectBoundingBox" width="0.11" height="0.11">
+<use xlink:href="#image0_1_7" transform="scale(0.005)"/>
+</pattern>
+<pattern id="pattern2_1_7" patternContentUnits="objectBoundingBox" width="0.11" height="0.11">
+<use xlink:href="#image0_1_7" transform="scale(0.005)"/>
+</pattern>
+<pattern id="pattern3_1_7" patternContentUnits="objectBoundingBox" width="0.11" height="0.11">
+<use xlink:href="#image0_1_7" transform="scale(0.005)"/>
+</pattern>
+<pattern id="pattern4_1_7" patternContentUnits="objectBoundingBox" width="0.11" height="0.11">
+<use xlink:href="#image0_1_7" transform="scale(0.005)"/>
+</pattern>
+<image id="image0_1_7" width="22" height="22" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAE1JREFUOBFjYMAE/4FCIEwRYKJINx7NQ89gRqBviA1PkFqiAc2CApsLRlMFtlAZGDG8cUGzVDH0DCYlN5GUQ2kWFJSkp9FUQUnoDWa9ANxCChcPkK+JAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>

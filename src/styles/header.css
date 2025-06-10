@@ -29,7 +29,7 @@ header button,
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6rem;
+  padding: 0 10rem;
 }
 
 /* Left */
@@ -67,12 +67,11 @@ header button,
 /* Download Button */
 .header-download-btn {
   background-color: #A6EC8A;
-
   text-align: center;
   color: #064E3B;
   border: none;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
   padding: 0.5rem 1rem;
   border-radius: 50px;
   text-decoration: none;

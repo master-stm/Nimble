@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/header.css';
 
-const Header = ({ image }) => {
+const Header = ({ image, handleDownloadClick  }) => {
   return (
     <header className="header">
       <nav className="navbar">
@@ -20,7 +20,7 @@ const Header = ({ image }) => {
 
           {/* Right Side: Download + Hamburger */}
           <div className="navbar-right">
-            <a href="https://play.google.com/store/apps/details?id=com.nimble.snap.pay" className="header-download-btn">Download Now</a>
+            <a style={{cursor: 'pointer'}} onClick={(e) => { e.preventDefault(); handleDownloadClick() }} className="header-download-btn">Download Now</a>
             <button
               className="navbar-toggler"
               type="button"

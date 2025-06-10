@@ -1,5 +1,4 @@
-import React from "react";
-import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
+
 import "../styles/Footer.css";
 
 export default function Footer({ bgColor = "#fff", textColor = "#064E3B" }) {

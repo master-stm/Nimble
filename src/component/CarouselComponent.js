@@ -8,6 +8,7 @@ const CarouselComponent = ({
   setCurrentSlide = () => {},
   nextSlide = () => {},
   prevSlide = () => {},
+  handleDownloadClick
 }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
@@ -50,7 +51,7 @@ const CarouselComponent = ({
                     <h2>{slide.headline}</h2>
                     <p>{slide.subtext}</p>
                       {/* Apply the slide‐specific colors here: */}
-                      <a href="https://play.google.com/store/apps/details?id=com.nimble.snap.pay" style={{textDecoration: 'none'}}>
+                      <a onClick={(e) => { e.preventDefault(); handleDownloadClick() }}>
                       <button
                       className="download-btn"
                       style={{

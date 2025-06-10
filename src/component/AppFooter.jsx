@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/AppFooter.css';
 import StoreButton from './StoreButton';
-import appStoreBadge from '../images/apple.png';
-import playStoreBadge from '../images/playstore.png';
+import appStoreBadge from '../images/Apple.svg';
+import playStoreBadge from '../images/Playstore.svg';
 import footerLogo from '../images/footer-logo.png';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 //  border: 5px solid black;
@@ -33,23 +33,20 @@ const AppFooter = () => {
                   }}>Get the app</p>
   <div className='footer-download-outer'>
       <div className="footer-col footer-download">
-   
-   
           <StoreButton
-  logo={appStoreBadge}
-  line1="Download on"
-  line2="App Store"
-  link="https://apps.apple.com"
-/>
+            logo={appStoreBadge}
+            line1="Download on"
+            line2="App Store"
+            link="https://apps.apple.com/us/app/get-nimble-app/id6745023982"
+          />
 
-   
-        <StoreButton
-  logo={playStoreBadge}
-  line1="Download on"
-  line2="Google Play"
-  link="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
-/>
-</div>
+          <StoreButton
+            logo={playStoreBadge}
+            line1="Download on"
+            line2="Google Play"
+            link="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
+          />
+        </div>
       </div>
       </div>
       {/* Column 3: Text links + email */}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import countDownBg from "../images/count-down-bg.svg"
 import '../styles/countdown.css';
 const Countdown = () => {
   const calculateTimeLeft = () => {
@@ -7,14 +8,14 @@ const Countdown = () => {
     const difference = targetDate - now;
 
     if (difference <= 0) {
-      return { days: 0, hours: 0, minutes: 0,seconds: 0  };
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
 
     return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / (1000 * 60)) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
     };
   };
 
@@ -32,12 +33,11 @@ const Countdown = () => {
       className="py-5 text-center"
       style={{
         backgroundColor: "#E8F8E4",
-        backgroundImage:
-          "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.01) 10px, rgba(0,0,0,0.01) 20px)",
+        backgroundImage: `url(${countDownBg}), repeating-linear-gradient(transparent)`,
         fontFamily: "Lato, sans-serif",
       }}
     >
-      <h2 className="fw-bold mb-4" style={{ fontSize: "1.8rem" }}>
+      <h2 className="mb-4 launching-soon">
         We are launching soon!{" "}
         <span role="img" aria-label="rocket">
           🚀
