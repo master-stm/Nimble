@@ -50,6 +50,7 @@ const CarouselComponent = ({
                     <h2>{slide.headline}</h2>
                     <p>{slide.subtext}</p>
                       {/* Apply the slide‐specific colors here: */}
+                      <a href="https://play.google.com/store/apps/details?id=com.nimble.snap.pay" style={{textDecoration: 'none'}}>
                       <button
                       className="download-btn"
                       style={{
@@ -59,6 +60,7 @@ const CarouselComponent = ({
                     >
                       Download Now
                     </button>
+                    </a>
                   </div>
                 
               </div>

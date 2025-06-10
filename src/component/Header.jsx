@@ -20,7 +20,7 @@ const Header = ({ image }) => {
 
           {/* Right Side: Download + Hamburger */}
           <div className="navbar-right">
-            <a href="/" className="header-download-btn">Download Now</a>
+            <a href="https://play.google.com/store/apps/details?id=com.nimble.snap.pay" className="header-download-btn">Download Now</a>
             <button
               className="navbar-toggler"
               type="button"

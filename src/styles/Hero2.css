@@ -10,8 +10,8 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 60vh; 
-    padding: 0;
+    height: 90vh; 
+    padding: 88px 0;
     
     /* make .hero2 the flex container now */
     display: flex;
@@ -30,20 +30,41 @@
   
   .hero2-heading {
     font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero3-heading {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2.625rem;
   }
   
   .hero2-subtext {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+  }
+  .hero3-subtext {
+    font-size: 1.125rem;
+    margin-bottom: 2.625rem;
+    font-weight: 500;
   }
   
   .hero2-btn {
     padding: 0.75rem 1.5rem;
     border-radius: 999px;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+  }
+  .hero3-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1.125rem;
     text-decoration: none;
     text-align: center;
     display: inline-block;
@@ -101,21 +122,43 @@
       margin-top: 40px;
       width: 100%;
       max-width: 90%;   /* leave some breathing room on the sides */
-      align-items: flex-start;
+      align-items: center;
       text-align: left;
     }
   
     .hero2-heading {
+      text-align: center;
+      font-size: 2.25rem;
+      margin-bottom: 2rem;
+    }
+    .hero3-heading {
+      text-align: center;
       font-size: 2rem;
+      margin-bottom: 2rem;
     }
   
     .hero2-subtext {
+      text-align: center;
       font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero3-subtext {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
   
     .hero2-btn {
       width: 100%;
       max-width: 200px;
+      font-size: 1rem;
+      text-align: center !important;
+    }
+    .hero3-btn {
+      width: 100%;
+      max-width: 200px;
+      font-size: 1rem;
       text-align: center !important;
     }
   
@@ -131,7 +174,7 @@
       align-items: center;      /* center image vertically */
       
       overflow: hidden;         
-
+      padding-bottom: 1.5rem;
      
       
       /* Flex: let this wrapper take up all leftover space */

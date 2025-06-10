@@ -38,7 +38,7 @@ const Countdown = () => {
       }}
     >
       <h2 className="fw-bold mb-4" style={{ fontSize: "1.8rem" }}>
-        Launching soon!{" "}
+        We are launching soon!{" "}
         <span role="img" aria-label="rocket">
           🚀
         </span>

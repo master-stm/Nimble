@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 2rem 3rem;
+  padding: 7rem 0rem 3.5rem 0rem;
   max-width: 100%;
   margin: auto;
   font-family: 'Lato', sans-serif;
@@ -14,9 +14,9 @@
 }
 .app-footer-inside{
   display: flex;
-  justify-content: space-evenly;
-
+  justify-content: space-between;
   width: 100%;
+  padding: 0rem 6rem;
 }
 .footer-col {
   display: flex;
@@ -38,6 +38,9 @@
   font-weight: 600;
   font-size: 1rem;
 }
+.footer-links p{
+  margin-bottom: 0.7rem;
+}
 .footer-links a:hover,
 .footer-contact a:hover {
   text-decoration: underline;
@@ -50,7 +53,6 @@
 
 /* Store badges */
 .footer-download {
-  flex-direction: row;
   gap: 1rem;
 
 
@@ -66,11 +68,7 @@
  flex-direction: column;
  
 }
-.footer-social-outer p,
-.footer-download-outer p{
 
-  align-self: center;
- }
 .footer-download img {
   height: 40px;
   width: auto;
@@ -140,10 +138,15 @@
   color: #004C45;
 }
 
+.footer-logo {
+  height: 39px;
+  width: 46px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 767px) {
   .app-footer {
-
-
+    padding: 2rem 1rem;
   }
 
   .app-footer-inside {
@@ -152,7 +155,7 @@
     flex-direction: column;
     align-items: start;
     gap: 2rem;
-
+    padding: 0rem 1rem;
   }
 
   .footer-col {
@@ -188,6 +191,7 @@
     font-weight: 700;
     color: #000;
     margin-bottom: 0.5rem;
+    align-self: flex-start;
     
   }
   
@@ -197,6 +201,10 @@
     width: 100%;
 
   }
+  .footer-download-outer{
+    width: 100%;
+    
+  }
   .footer-contact {
     width: 100%;
     align-items: flex-start;
@@ -204,13 +212,10 @@
   }
   
   .footer-download {
-
+    flex-direction: row;
     width: 100%;
     display: flex;
-justify-content: center;
-  
-
-    
+    justify-content: center;
   }
 
   .footer-contact-text {
@@ -238,5 +243,7 @@ justify-content: center;
     color: #004C45;
     font-size: 18px;
   }
+  .footer-logo {
+    display: none;
+  }
 }
-

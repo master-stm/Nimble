@@ -28,32 +28,32 @@ const Hero2 = ({
   // Only build a style‐object if we're on mobile
   const mobileBgStyle = isMobile
     ? { backgroundImage: `url(${image2Mobile})` }
-    : {
-        backgroundImage: `url(${image2})`,
-      };
+    : { backgroundImage: `url(${image2})`};
 
   return (
     <section
       className="hero2"
       style={{
         /* desktop: {} (no background), mobile: {  } */
+        ...(firstline === "Ready to try Nimble?" ? { height: '62.25vh', padding: 0 } : {}),
+        ...(isMobile ? { height: '80vh', padding: 0 } : {}),
         ...mobileBgStyle
       }}
     >
       {/* Left Text Side */}
       <div className="hero2-text-wrapper">
-        <h1 className="hero2-heading" style={{ color: firstLineColor }}>
+        <h1 className={`${firstline === "Ready to try Nimble?" ? "hero3-heading" : "hero2-heading"}`} style={{ color: firstLineColor }}>
           {firstline}
         </h1>
-        <p className="hero2-subtext" style={{ color: secondLineColor }}>
+        <p className={`${firstline === "Ready to try Nimble?" ? "hero3-subtext" : "hero2-subtext"}`} style={{ color: secondLineColor }}>
           {secondline}
         </p>
         <a
-          href="/"
-          className="hero2-btn"
+          href="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
+          className={`${firstline === "Ready to try Nimble?" ? "hero3-btn" : "hero2-btn"}`}
           style={{
             backgroundColor: buttonbg,
-            color: buttontextC,
+            color: buttontextC
           }}
         >
           Download Now
@@ -61,7 +61,7 @@ const Hero2 = ({
       </div>
 
       {/* Right Image (phone mockup) */}
-      <div className="hero2-image-wrapper">
+      <div className="hero2-image-wrapper" style={{ paddingBottom: firstline === "Ready to try Nimble?" ? '0px' : '24px' }}>
         <img src={image} alt="phone" className="hero2-image" />
       </div>
     </section>

@@ -55,7 +55,7 @@ const NimbleLandingPage2 = () => {
 
                   {/* Right: Download Button */}
                   <a
-                    href="#"
+                    href="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
                     className="btn btn-success fw-semibold px-4 py-2 rounded-pill"
                     style={{ backgroundColor: '#BBF7D0', color: '#064E3B', border: 'none' }}
                   >
@@ -78,7 +78,7 @@ const NimbleLandingPage2 = () => {
               Download the Nimble app and be among the first to shop at Neighbors Market
             </p>
             <a
-              href="#"
+              href="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
               className="btn px-4 py-3 rounded-pill"
               style={{
                 backgroundColor: '#004C45',
@@ -87,7 +87,7 @@ const NimbleLandingPage2 = () => {
                 fontSize: '1.1rem'
               }}
             >
-              Download Nows
+              Download Now
             </a>
           </div>
 

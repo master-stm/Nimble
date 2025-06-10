@@ -35,7 +35,7 @@ style={{
             {secondline}
           </p>
           <a
-            href="/"
+            href="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
             className="btn px-4 py-3 rounded-pill mb-4 mb-md-0"
             style={{
               backgroundColor: '#A4EC8A',

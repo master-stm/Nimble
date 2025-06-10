@@ -19,7 +19,7 @@ header button,
 
 /* Navbar Layout */
 .navbar {
-  padding: 0.5rem;
+  padding: 1rem 0;
 }
 
 .navbar-container {
@@ -29,23 +29,19 @@ header button,
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
-
+  padding: 0 6rem;
 }
 
 /* Left */
 .navbar-left {
   display: flex;
   align-items: center;
-
-
-
 }
 
 .navbar-links-desktop {
   display: flex;
-  margin-left: 1rem;
-  gap: 1rem;
+  margin-left: 1.5rem;
+  gap: 2.25rem;
 }
 
 .nav-link {
@@ -137,7 +133,7 @@ header button,
   }
 
   .navbar-container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

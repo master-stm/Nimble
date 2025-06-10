@@ -16,7 +16,7 @@ body {
 
 .carousel-wrapper {
   position: relative;
-  padding: 4rem 1rem;
+  padding: 6rem 3rem;
   width: 100%;
   margin: 0 ;
   border-radius: 1.5rem;
@@ -224,11 +224,12 @@ width: clamp(15%, 15vw, 85%);
 .slide-text h2 {
   color: #004C45;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 .slide-text p {
-  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  margin-top: 2.625rem;
   color: #333;
 }
 
@@ -491,6 +492,12 @@ width: clamp(15%, 15vw, 85%);
       z-index: 0;
         pointer-events: none;
   
+      }
+      .slide-text h2 {
+        font-size: 2rem;
+      }
+      .carousel-wrapper {
+        padding: 4rem 1rem;
       }
   }
   

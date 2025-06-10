@@ -35,7 +35,7 @@
   text-align: center;
   min-width: 80px;
   
-  flex: 1 1 calc(50% - 1rem); /* 2 per row by default */
+  flex: 1 1 calc(50% - 7rem); /* 2 per row by default */
 }
 
 .ticker-number,
@@ -55,11 +55,12 @@
 @media (max-width: 480px) {
   .countdown-wrapper {
     gap: 0.75rem;
+    /* max-width: 100px; */
   }
 
   .countdown-box {
-    flex: 1 1 100%; /* 1 per row on very small screens */
-    min-width: 100%;
+    /* flex: 1 1 100%;  */
+    /* min-width: 100%; */
     padding: 0.75rem 1rem;
   }
 

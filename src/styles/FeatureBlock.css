@@ -13,14 +13,15 @@
 .feature-left h3{
   color: #074F51;
   font-weight: 600;
+  font-size: 2.5rem;
 }
 .feature-left p{
   color: #7A7A7A;
-
+  max-width: 290px;
 }
 
 .feature-section-wrapper {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
     background-color: white;
   }
   
@@ -28,9 +29,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 6rem;
     flex-wrap: nowrap; 
-    max-width: 1200px;
+    max-width: 1070px;
     margin: auto;
   }
   
@@ -95,8 +96,9 @@
     align-items: center;
   }
   .main-mockup {
-    max-width: 70%;
-
+    max-width: 80%;
+    min-height: 510px;
+    min-width: 510px;
   }
   .floating-icon {
     position: absolute;
@@ -115,20 +117,19 @@
   }
   
   .features-wrapper {
-    padding: 4rem 2rem;
+    padding: 2.5rem 2rem 4rem 2rem;
     background-color: #fff;
   }
-.feature-right {
+  .feature-right {
     flex: 1 1 0;
     min-width: 0;
     max-width: 50%;
   
     
   }
+
   .feature-left{
     flex: 0.5 1 0;
-
-
     width: 1px;
   }
   .feature-right {
@@ -193,6 +194,12 @@
     text-align: left;
   }
 
+  .feature-left h3{
+    color: #074F51;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
   /* Right block (image + floating icon) spans full width and center-aligns the image */
   .feature-right {
     width: 100% !important;
@@ -211,6 +218,7 @@
     margin: 0; /* Remove centering */
     padding: 0;
     object-fit: contain;
+    min-width: auto;
   }
   
 

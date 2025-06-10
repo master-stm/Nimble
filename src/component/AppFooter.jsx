@@ -3,6 +3,7 @@ import '../styles/AppFooter.css';
 import StoreButton from './StoreButton';
 import appStoreBadge from '../images/apple.png';
 import playStoreBadge from '../images/playstore.png';
+import footerLogo from '../images/footer-logo.png';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 //  border: 5px solid black;
 const AppFooter = () => {
@@ -12,12 +13,12 @@ const AppFooter = () => {
       {/* Column 1: Shop links */}
       <div className="footer-col footer-links"
       style={{
-        fontWeight: 600,
+        fontWeight: 900,
         fontSize: '1rem',
         color: '#074F51',
-        
       }}
       >
+        <img src={footerLogo} alt="nimble" className="footer-logo" />
         <p>Shop Fast</p>
         <p>Shop Smart</p>
         <p>Shop Nimble</p>
@@ -46,7 +47,7 @@ const AppFooter = () => {
   logo={playStoreBadge}
   line1="Download on"
   line2="Google Play"
-  link="https://play.google.com/store/"
+  link="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
 />
 </div>
       </div>
