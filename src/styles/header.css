@@ -15,11 +15,15 @@ header button,
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
 }
 
 /* Navbar Layout */
 .navbar {
   padding: 1rem 0;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .navbar-container {
@@ -29,7 +33,7 @@ header button,
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10rem;
+  padding: 0 5rem;
 }
 
 /* Left */

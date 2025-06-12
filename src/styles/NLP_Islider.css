@@ -169,6 +169,11 @@ border: 5px solid black;
   display: block;
 }
 
+  @media (max-width: 1000px) {
+    .features-heading {
+      margin: 0rem;
+    }
+  }
 
 /* ─── MOBILE RESPONSIVE OVERRIDES ─── */
 @media (max-width: 768px) {
@@ -253,8 +258,5 @@ border: 5px solid black;
 
     background-color: #fff;
     padding: 1rem 1.5rem 2rem 1.5rem; 
-  }
-  .features-heading {
-    margin: 0rem;
   }
 }

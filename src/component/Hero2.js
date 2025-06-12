@@ -36,7 +36,7 @@ const Hero2 = ({
       className="hero2"
       style={{
         /* desktop: {} (no background), mobile: {  } */
-        ...(firstline === "Ready to try Nimble?" ? { height: '454px', padding: 0 } : {}),
+        ...(firstline === "Ready to try Nimble?" ? { height: '454px', padding: '0 24px' } : {}),
         ...(isMobile ? { height: '80vh', padding: 0 } : {}),
         ...mobileBgStyle
       }}

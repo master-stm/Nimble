@@ -6,7 +6,7 @@ import slide2 from '../images/logo.svg';
 import feature1 from '../images/feature1.png';
 import image2 from '../images/women.png';
 
-import feature2 from '../images/feature2.png';
+import feature2 from '../images/how-it-works-2.png';
 
 import feature3 from '../images/feature3.png';
 import '../styles/NLP_Islider.css'
@@ -23,7 +23,7 @@ import totebag from '../images/tote_bag.png';
 import two_g from '../images/two_g.png';
 import three_g from '../images/three_g.png';
 import Hero2 from '../component/Hero2';
-import imageA from '../images/phone1.svg';
+import imageA from '../images/main-img.png';
 
 import imagebackA from '../images/bg.png';
 import image_mobilebg from '../images/m_bg.png';
@@ -185,7 +185,7 @@ const NimbleLandingPage = () => {
           <div className="popup-content">
             <button className="close-btn" onClick={closePopup}>×</button>
             <h2 className="popup-title">Scan to Download</h2>
-            <QRCodeCanvas value={`${window.location.origin}/Download`} size={256} />
+            <QRCodeCanvas value="https://play.google.com/store/apps/details?id=com.nimble.snap.pay" size={256} />
           </div>
         </div>
       )}

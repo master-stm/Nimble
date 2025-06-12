@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Terms from "./pages/Terms";
-import Download from "./pages/Download";
 import PrivacyPolicies from "./pages/PrivacyPolicies";
 import DeleteAccount from "./pages/DeleteAccount";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -54,7 +53,7 @@ const App = () => {
   return (
     <Router>
       <div className="app-container">
-
+        
         <div className="main">
           <Routes>
             <Route path="/" element={<NimbleLandingPage />} />
@@ -62,14 +61,13 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/PrivacyPolicies" element={<PrivacyPolicies />} />
             <Route path="/Terms" element={<Terms />} />
-            <Route path="/Download" element={<Download />} />
             {/* <Route path="/NimbleLandingPage" element={<NimbleLandingPage />} />
             <Route path="/NimbleLandingPage2" element={<NimbleLandingPage />} /> */}
             {/* <Route path="/totebag1" element={<GoodieBagPage />} /> */}
             <Route path="/DeleteAccount" element={<DeleteAccount />} />
           </Routes>
         </div>
-
+       
       </div>
     </Router>
   );

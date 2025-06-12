@@ -10,7 +10,6 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 65vh;
     padding: 60px 0 35px 0;
     display: flex;
     justify-content: space-evenly;
@@ -81,9 +80,8 @@
   /* IMAGE SIDE */
   .hero2-image-wrapper {
     width: 100%;
-    max-width: 600px;
+    max-width: 498px;
     height: 100%;
-    aspect-ratio: 4/3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,7 +107,13 @@
     display: flex;
     align-self: last baseline;
   }
-  
+
+  @media (max-width: 1000px) {
+    .hero2 {
+      padding: 60px 24px 35px 24px;
+    }
+  }
+
   /* ────────────────────────────────────────────────────
      MOBILE BREAKPOINT (max-width: 768px)
      ──────────────────────────────────────────────────── */
@@ -189,18 +193,12 @@
     .hero2-image-wrapper {
       /* Remove aspect‐ratio so it can grow/take 100% height */
       width: 100%;
-      
       /* Instead of forcing 4:3, let height follow flex rules: */
       height: 100%;            /* attempt to fill parent’s height */
-      
       display: flex;
       justify-content: center;  /* center image horizontally */
       align-items: center;      /* center image vertically */
-      
-      overflow: hidden;         
-      padding-bottom: 1.5rem;
-     
-      
+      overflow: hidden;        
       /* Flex: let this wrapper take up all leftover space */
       flex: 1 1 auto;           /* grow/shrink so it fills parent */
     }

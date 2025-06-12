@@ -147,6 +147,13 @@
     margin-bottom: 3rem;
     text-align: center;
   }
+
+  @media (max-width: 1000px) {
+    .main-mockup {
+      min-height: 425px;
+      min-width: 425px;
+    }
+  }
   
   /* ─── MOBILE LAYOUT OVERRIDES (<768px) ─── */
 @media (max-width: 768px) {
@@ -175,25 +182,28 @@
   .feature-left {
     width: 100% !important;
     max-width: 100% !important;
-    padding: 1rem;
+    padding: 0rem;
     box-sizing: border-box;
-
-
   }
 
 
   /* Keep icon-box, h3, and p left-aligned */
   .icon-box {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.5rem 0;
   }
   .feature-left h3,
   .feature-left p {
     text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    min-width: 100%;
+    margin-bottom: 1.5rem;
   }
 
   .feature-left h3{
     color: #074F51;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2rem;
   }
 
@@ -201,11 +211,7 @@
   .feature-right {
     width: 100% !important;
     max-width: 100% !important;
-
-
     justify-content: center;
-
-
   }
 
   /* Shrink the mockup image slightly on mobile */
@@ -216,6 +222,8 @@
     padding: 0;
     object-fit: contain;
     min-width: auto;
+    min-height: 373px;
+    margin-bottom: 1.5rem;
   }
   
 
@@ -225,7 +233,11 @@
     left: calc(50% - 25px); /* centers a 50px-wide icon */
   }
   .features-wrapper {
-    padding: 2.5rem 1rem 4rem 1rem;
+    padding: .5rem 1rem 0rem 1rem;
     background-color: #fff;
+  }
+  .features-heading {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
   }
 }

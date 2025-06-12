@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../styles/CarouselComponent.css";
 
- 
+
 const CarouselComponent = ({
   slides = [],
   currentSlide = 0,
-  setCurrentSlide = () => {},
-  nextSlide = () => {},
-  prevSlide = () => {},
+  setCurrentSlide = () => { },
+  nextSlide = () => { },
+  prevSlide = () => { },
   handleDownloadClick
 }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -31,28 +31,28 @@ const CarouselComponent = ({
 
               <div className="slide-content">
                 <div className="left-side">
-                            {(
-                              <img
-                              src={isMobile ? slide.m_vector : slide.vector1}
-                                alt="Background Curve"
-                                className={`background-curve background-curve-${index}`}
-                              />
-                            )}
+                  {(
+                    <img
+                      src={isMobile ? slide.m_vector : slide.vector1}
+                      alt="Background Curve"
+                      className={`background-curve background-curve-${index}`}
+                    />
+                  )}
 
-                      <div className={`slide-image-wrapper slide-image-wrapper-${index}`}>
-                      <img
-                                    src={isMobile ? slide.imageMobile : slide.imageDesktop}
-                                    alt="Hero"
-                                    className="slide-text-outer"
-                                  />
-                                </div>
+                  <div className={`slide-image-wrapper slide-image-wrapper-${index}`}>
+                    <img
+                      src={isMobile ? slide.imageMobile : slide.imageDesktop}
+                      alt="Hero"
+                      className="slide-text-outer"
+                    />
+                  </div>
                 </div>
-                  <div className={`slide-text slide-text-${index}`}>
-                    <h2>{slide.headline}</h2>
-                    <p>{slide.subtext}</p>
-                      {/* Apply the slide‐specific colors here: */}
-                      <a onClick={(e) => { e.preventDefault(); handleDownloadClick() }}>
-                      <button
+                <div className={`slide-text slide-text-${index}`}>
+                  <h2>{slide.headline}</h2>
+                  <p>{slide.subtext}</p>
+                  {/* Apply the slide‐specific colors here: */}
+                  <a onClick={(e) => { e.preventDefault(); handleDownloadClick() }}>
+                    <button
                       className="download-btn"
                       style={{
                         backgroundColor: slide.buttonBg,
@@ -61,9 +61,9 @@ const CarouselComponent = ({
                     >
                       Download Now
                     </button>
-                    </a>
-                  </div>
-                
+                  </a>
+                </div>
+
               </div>
             </div>
           ))}

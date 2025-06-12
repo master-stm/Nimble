@@ -27,25 +27,23 @@ const AppFooter = () => {
 
       {/* Column 2: Store badges */}
       <div className="footer-download-outer">
-      <p style={{ color: 'black' ,
-                  fontWeight: 600 , marginBottom: '1.2em'
-                  
-                  }}>Get the app</p>
-  <div className='footer-download-outer'>
-      <div className="footer-col footer-download">
+        <p className='footer-contact-heading'>Get the app</p>
+        <div className='footer-download-outer'>
+        <div className="footer-col footer-download">
+
           <StoreButton
             logo={appStoreBadge}
             line1="Download on"
             line2="App Store"
             link="https://apps.apple.com/us/app/get-nimble-app/id6745023982"
           />
-
-          <StoreButton
-            logo={playStoreBadge}
-            line1="Download on"
-            line2="Google Play"
-            link="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
-          />
+   
+        <StoreButton
+          logo={playStoreBadge}
+          line1="Download on"
+          line2="Google Play"
+          link="https://play.google.com/store/apps/details?id=com.nimble.snap.pay"
+        />
         </div>
       </div>
       </div>
@@ -54,12 +52,12 @@ const AppFooter = () => {
     <div className='footer-contact-outer2'>
     <div className="footer-col footer-contact">
   <p className="footer-contact-heading">Contact us</p>
-  <p className="footer-contact-text">
+  <p className="footer-contact-text" style={{fontWeight: '400'}}>
     Need help with the app? Reach out<br />
     anytime — we're happy to assist
   </p>
-  <a href="mailto:sales@getnimbleapp.com" className="footer-contact-email">
-    sales@getnimbleapp.com
+  <a href="mailto:info@getnimbleapp.com" className="footer-contact-email">
+    info@getnimbleapp.com
   </a>
 </div>
 

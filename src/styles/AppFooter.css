@@ -16,7 +16,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0rem 10rem;
+  padding: 0rem 4rem;
+  max-width: 1440px;
 }
 .footer-col {
   display: flex;
@@ -141,12 +142,12 @@
 .footer-logo {
   height: 39px;
   width: 46px;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 767px) {
   .app-footer {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
   }
 
   .app-footer-inside {
@@ -154,8 +155,8 @@
     height: 100%;
     flex-direction: column;
     align-items: start;
-    gap: 2rem;
-    padding: 0rem 1rem;
+    gap: 3rem;
+    padding: 0rem 0rem;
   }
 
   .footer-col {
@@ -182,28 +183,24 @@
     text-decoration: none;
     margin: 0.3rem 0;
   }
- 
 
   .footer-download-outer p,
   .footer-contact-heading,
   .footer-social-outer p {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 800;
     color: #000;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     align-self: flex-start;
-    
   }
   
   .footer-contact-outer{
-
     display: flex;
     width: 100%;
 
   }
   .footer-download-outer{
     width: 100%;
-    
   }
   .footer-contact {
     width: 100%;
@@ -212,14 +209,13 @@
   }
   
   .footer-download {
-    flex-direction: row;
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
   .footer-contact-text {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #000;
     line-height: 1.4;
     margin: 0.5rem 0;
@@ -237,13 +233,11 @@
   }
 
   .footer-social li a {
-    width: 36px;
-    height: 36px;
-    background-color: #E8F8E4;
-    color: #004C45;
+    background-color: #074F51;
+    color: #fff;
     font-size: 18px;
   }
-  .footer-logo {
-    display: none;
+  .footer-links p{
+    margin-bottom: 0.2rem;
   }
 }
