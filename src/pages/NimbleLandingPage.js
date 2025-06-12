@@ -185,7 +185,7 @@ const NimbleLandingPage = () => {
           <div className="popup-content">
             <button className="close-btn" onClick={closePopup}>×</button>
             <h2 className="popup-title">Scan to Download</h2>
-            <QRCodeCanvas value="https://play.google.com/store/apps/details?id=com.nimble.snap.pay" size={256} />
+            <QRCodeCanvas value={`${window.location.origin}/download`} size={256} />
           </div>
         </div>
       )}
