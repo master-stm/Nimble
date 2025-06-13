@@ -114,7 +114,7 @@ const GoodieBagPage = () => {
       categoryName: "Crazy D",
       products: [
         {
-          name: "Flirt Sparkling Basil Lemonade",
+          name: "Crazy D’s Twisted Citrus Sparkling Prebiotic Soda",
           size: "355 ml",
           image: crazy.Lemonade,
           link: "https://bit.ly/crazydlabs01",
