@@ -82,7 +82,8 @@ const NimbleLandingPage = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slidesData.length) % slidesData.length);
 
   const handleDownloadClick = () => {
-    setShowPopup(true);
+    // setShowPopup(true);
+    window.location.href = "/download";
   };
 
   // Function to handle closing the popup
