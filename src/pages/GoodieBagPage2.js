@@ -1,6 +1,6 @@
 import React from 'react';
 // import ProductCard from '../component/ProductCard';
-import Footer from './Footer';
+import Footer from './Footer.js';
 import '../styles/GoodieBagPage.css';
 import CategorySlider from '../component/CategorySlider.js';
 import n_logo from '../images/n_logo.png'
@@ -9,7 +9,7 @@ import bev from '../images/bev.png'
 const GoodieBagPage = () => {
   const categories = [
     {
-      categoryName: 'Sparkling Beverages',
+      categoryName: 'Vibe Kale Chips',
       products: [
         { 
           name: 'Rubicon Sparkling Guava', 
@@ -61,7 +61,7 @@ const GoodieBagPage = () => {
             
           </div>
           <div className="goodie-header">
-              <h2 >Goodie Bag</h2>
+              <h2 >Goodie Bag 2</h2>
               <p className="subtitle">What's in my goodie bag?</p>
             </div>
           <div className="goodie-bag-card">
@@ -77,7 +77,10 @@ const GoodieBagPage = () => {
           </div>
         </div>
       </div>
-      <Footer bgColor="#074F51" textColor="#FFFFFF" />
+       
+      <div id="cu">
+        <Footer bgColor="#A4EC8A" textColor="#064E3B" />
+      </div>
     </div>
   );
 };
