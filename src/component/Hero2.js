@@ -29,7 +29,7 @@ const Hero2 = ({
   // Only build a style‐object if we're on mobile
   const mobileBgStyle = isMobile
     ? { backgroundImage: `url(${image2Mobile})` }
-    : { backgroundImage: `url(${image2})`};
+    : { backgroundImage: `url(${image2})` };
 
   return (
     <section
@@ -50,7 +50,7 @@ const Hero2 = ({
           {secondline}
         </p>
         <a
-          onClick={(e) => { e.preventDefault(); handleDownloadClick() }}
+          href="/download"
           className={`${firstline === "Ready to try Nimble?" ? "hero3-btn" : "hero2-btn"}`}
           style={{
             backgroundColor: buttonbg,

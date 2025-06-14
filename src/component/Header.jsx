@@ -20,7 +20,7 @@ const Header = ({ image, handleDownloadClick  }) => {
 
           {/* Right Side: Download + Hamburger */}
           <div className="navbar-right">
-            <a style={{cursor: 'pointer'}} onClick={(e) => { e.preventDefault(); handleDownloadClick() }} className="header-download-btn">Download Now</a>
+            <a style={{cursor: 'pointer'}} href="/download" className="header-download-btn">Download Now</a>
             <button
               className="navbar-toggler"
               type="button"
@@ -43,7 +43,7 @@ const Header = ({ image, handleDownloadClick  }) => {
         <div className="navbar-collapse collapse" id="mobileNavLinks">
           <ul className="navbar-nav-mobile">
             <li><a className="nav-link" href="#hiw">How it Works</a></li>
-            <li><a className="nav-link" href="#cu">Contact Us</a></li>
+            <li><a className="nav-link" href="/contact">Contact Us</a></li>
           </ul>
         </div>
       </nav>

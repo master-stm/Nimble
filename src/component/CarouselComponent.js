@@ -51,7 +51,7 @@ const CarouselComponent = ({
                   <h2>{slide.headline}</h2>
                   <p>{slide.subtext}</p>
                   {/* Apply the slide‐specific colors here: */}
-                  <a onClick={(e) => { e.preventDefault(); handleDownloadClick() }}>
+                  <a href="/download">
                     <button
                       className="download-btn"
                       style={{
