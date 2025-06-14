@@ -11,9 +11,11 @@ const Download = () => {
       window.location.href = "https://apps.apple.com/us/app/get-nimble-app/id6745023982";
     } else if (/android/.test(userAgent)) {
       window.location.href = "https://play.google.com/store/apps/details?id=com.nimble.snap.pay";
-    } else {
-      console.log("Desktop browser detected. No redirection.");
-    }
+    } 
+    // else {
+    //   console.log("Desktop browser detected. No redirection.");
+    //   window.location.href = "https://getnimbleapp.com/";
+    // }
   }, [])
 
   return <section className="body container" style={{ marginTop: "20px" }}>
